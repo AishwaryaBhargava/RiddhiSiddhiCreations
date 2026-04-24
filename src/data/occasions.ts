@@ -1,7 +1,7 @@
 export const occasions = [
   'Bridal Mehndi',
-  'Guest Henna',
-  'Festivals',
+  'Festivals & Carnivals',
+  'Proms & Parties',
   'Baby Showers',
   'Custom Requests',
 ]
