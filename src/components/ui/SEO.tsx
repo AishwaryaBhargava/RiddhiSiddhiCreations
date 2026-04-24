@@ -6,7 +6,7 @@ interface SEOProps {
   image?: string
 }
 
-const BASE_URL = 'https://riddhisiddhicreations.vercel.app'
+const BASE_URL = 'https://riddhi-siddhi-creations.vercel.app'
 const DEFAULT_IMAGE = `${BASE_URL}/og-image.jpg`
 const SITE_NAME = 'RiddhiSiddhi Creations'
 
