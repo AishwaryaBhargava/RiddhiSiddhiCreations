@@ -2,11 +2,25 @@ export interface GalleryImage {
   id: string
   src: string
   alt: string
-  category: 'bridal' | 'festival' | 'prom' | 'babyshower' | 'custom'
+  category: 'all' | 'bridal' | 'festival' | 'prom' | 'babyshower' | 'custom'
 }
 
 export const galleryImages: GalleryImage[] = [
-  // Real images will be added here when Arpana provides them
-  // Example structure:
-  // { id: '1', src: '/images/gallery/bridal-1.jpg', alt: 'Bridal mehndi full hands', category: 'bridal' },
+  // Images will be added here once Arpana provides them
+  // Example:
+  // {
+  //   id: '1',
+  //   src: '/src/assets/images/gallery/bridal-1.jpg',
+  //   alt: 'Intricate bridal mehndi on both hands',
+  //   category: 'bridal',
+  // },
+]
+
+export const categories = [
+  { label: 'All', value: 'all' },
+  { label: 'Bridal', value: 'bridal' },
+  { label: 'Festival', value: 'festival' },
+  { label: 'Proms & Parties', value: 'prom' },
+  { label: 'Baby Shower', value: 'babyshower' },
+  { label: 'Custom', value: 'custom' },
 ]

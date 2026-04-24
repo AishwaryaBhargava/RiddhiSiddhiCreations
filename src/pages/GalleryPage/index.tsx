@@ -1,5 +1,11 @@
+import PhotoGrid from '../../components/gallery/PhotoGrid'
+
 function GalleryPage() {
-  return <div>Gallery Page</div>
+  return (
+    <div>
+      <PhotoGrid />
+    </div>
+  )
 }
 
 export default GalleryPage
