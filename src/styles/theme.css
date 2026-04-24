@@ -1,0 +1,10 @@
+:root {
+  --color-black: #0A0A0A;
+  --color-gold: #C9A24D;
+  --color-gold-dim: rgba(201, 162, 77, 0.15);
+  --color-gold-line: rgba(201, 162, 77, 0.22);
+  --color-ivory: #FAF7F2;
+  --color-ivory-2: #F0EBE3;
+  --color-gray: #5F5F5F;
+  --color-text-muted: rgba(250, 247, 242, 0.55);
+}
