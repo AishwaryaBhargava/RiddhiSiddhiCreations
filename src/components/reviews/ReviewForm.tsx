@@ -9,8 +9,8 @@ const schema = z.object({
   city: z.string().optional(),
   rating: z.number().min(1, 'Please select a rating').max(5),
   review: z.string().min(20, 'Please write at least a sentence about your experience'),
-  permission: z.literal(true, {
-    errorMap: () => ({ message: 'Please give permission to display your review' }),
+  permission: z.literal(true).refine((val) => val === true, {
+    message: 'Please give permission to display your review',
   }),
 })
 
