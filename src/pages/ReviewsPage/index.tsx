@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import SEO from '../../components/ui/SEO'
 import { testimonials } from '../../data/testimonials'
 import ReviewCard from '../../components/reviews/ReviewCard'
 import ReviewForm from '../../components/reviews/ReviewForm'
@@ -9,7 +10,11 @@ function ReviewsPage() {
   const approved = testimonials.filter((t) => t.rating >= 4)
 
   return (
-    <div>
+    <>
+      <SEO
+        title="Client Reviews"
+        description="Read real reviews from happy clients of RiddhiSiddhi Creations. Bridal mehndi, festival henna, baby showers, and more. Share your own experience with Arpana."
+      />
 
       {/* Page header */}
       <section className="py-20 px-6 bg-[radial-gradient(ellipse_60%_60%_at_50%_60%,rgba(201,162,77,0.07)_0%,transparent_65%)]">
@@ -65,8 +70,7 @@ function ReviewsPage() {
           </div>
         </div>
       </section>
-
-    </div>
+    </>
   )
 }
 

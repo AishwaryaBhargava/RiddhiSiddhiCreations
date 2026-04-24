@@ -1,11 +1,16 @@
 import { motion } from 'framer-motion'
+import SEO from '../../components/ui/SEO'
 import ArtistProfile from '../../components/about/ArtistProfile'
 import Button from '../../components/ui/Button'
 import SectionHeading from '../../components/ui/SectionHeading'
 
 function AboutPage() {
   return (
-    <div>
+    <>
+      <SEO
+        title="About Arpana"
+        description="Meet Arpana Bhargava — professionally trained henna artist, founder of RiddhiSiddhi Creations. 100+ happy clients, organic henna, and designs that tell your story."
+      />
 
       {/* Page header */}
       <section className="py-20 px-6 bg-[radial-gradient(ellipse_60%_60%_at_50%_60%,rgba(201,162,77,0.07)_0%,transparent_65%)]">
@@ -57,8 +62,7 @@ function AboutPage() {
           </Button>
         </motion.div>
       </section>
-
-    </div>
+    </>
   )
 }
 

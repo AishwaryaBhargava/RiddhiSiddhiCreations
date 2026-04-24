@@ -1,10 +1,15 @@
 import { motion } from 'framer-motion'
+import SEO from '../../components/ui/SEO'
 import InquiryForm from '../../components/contact/InquiryForm'
 import SectionHeading from '../../components/ui/SectionHeading'
 
 function ContactPage() {
   return (
-    <div>
+    <>
+      <SEO
+        title="Contact & Booking"
+        description="Book Arpana Bhargava for your next event. Fill out a quick inquiry form and she will be in touch personally. Bridal mehndi, festivals, baby showers, and custom requests."
+      />
 
       {/* Page header */}
       <section className="py-20 px-6 bg-[radial-gradient(ellipse_60%_60%_at_50%_60%,rgba(201,162,77,0.07)_0%,transparent_65%)]">
@@ -32,18 +37,23 @@ function ContactPage() {
           {/* Direct contact note */}
           <p className="font-sans text-[11px] text-ivory/30 text-center mt-6 leading-relaxed">
             Prefer to reach out directly?&nbsp;
-            <a href="tel:4849952444" className="text-gold/60 hover:text-gold transition-colors">
+            <a
+              href="tel:4849952444"
+              className="text-gold/60 hover:text-gold transition-colors"
+            >
               484-995-2444
             </a>
             &nbsp;or&nbsp;
-            <a href="mailto:bhargavasiddhi@gmail.com" className="text-gold/60 hover:text-gold transition-colors">
+            <a
+              href="mailto:bhargavasiddhi@gmail.com"
+              className="text-gold/60 hover:text-gold transition-colors"
+            >
               bhargavasiddhi@gmail.com
             </a>
           </p>
         </motion.div>
       </section>
-
-    </div>
+    </>
   )
 }
 

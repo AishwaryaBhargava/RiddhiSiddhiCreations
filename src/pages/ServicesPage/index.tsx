@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import SEO from '../../components/ui/SEO'
 import { services } from '../../data/services'
 import ServiceCard from '../../components/services/ServiceCard'
 import PricingInfo from '../../components/services/PricingInfo'
@@ -7,7 +8,11 @@ import Button from '../../components/ui/Button'
 
 function ServicesPage() {
   return (
-    <div>
+    <>
+      <SEO
+        title="Services & Pricing"
+        description="Henna services by Arpana Bhargava including bridal mehndi, guest henna, festival designs, baby shower, and custom requests. Organic henna. Available nationwide."
+      />
 
       {/* Page header */}
       <section className="py-20 px-6 bg-[radial-gradient(ellipse_60%_60%_at_50%_60%,rgba(201,162,77,0.07)_0%,transparent_65%)]">
@@ -43,8 +48,7 @@ function ServicesPage() {
           </Button>
         </motion.div>
       </section>
-
-    </div>
+    </>
   )
 }
 

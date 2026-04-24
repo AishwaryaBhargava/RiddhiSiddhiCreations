@@ -1,3 +1,4 @@
+import SEO from '../../components/ui/SEO'
 import Hero from '../../components/home/Hero'
 import ValuePillars from '../../components/home/ValuePillars'
 import OccasionsStrip from '../../components/home/OccasionsStrip'
@@ -8,7 +9,11 @@ import HomeCTA from '../../components/home/HomeCTA'
 
 function HomePage() {
   return (
-    <div>
+    <>
+      <SEO
+        title="Exquisite Henna Art for Your Special Moments"
+        description="RiddhiSiddhi Creations by Arpana Bhargava — professional henna artist specializing in bridal mehndi, custom designs, and organic henna for all occasions. Available nationwide."
+      />
       <Hero />
       <ValuePillars />
       <OccasionsStrip />
@@ -16,7 +21,7 @@ function HomePage() {
       <Testimonials />
       <BookingSteps />
       <HomeCTA />
-    </div>
+    </>
   )
 }
 
