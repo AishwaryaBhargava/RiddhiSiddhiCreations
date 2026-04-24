@@ -1,6 +1,6 @@
 # RiddhiSiddhi Creations — Website
 
-**By Arpana Bhargava**
+**For Arpana Bhargava**
 **Built by Aishwarya Bhargava**
 
 ---
@@ -192,4 +192,3 @@ These features are intentionally out of scope for the initial launch:
 Business: RiddhiSiddhi Creations
 Artist: Arpana Bhargava
 Instagram: @riddhisiddhicreations22
-Phone: 484-995-2444
