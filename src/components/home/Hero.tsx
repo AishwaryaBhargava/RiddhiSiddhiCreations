@@ -52,7 +52,7 @@ function Hero() {
           animate={{ opacity: 0.85 }}
           transition={{ duration: 0.8, delay: 0.3 }}
         >
-          by Arpana Bhargava
+          by Siddhi Bhargava
         </motion.p>
 
         {/* Divider */}

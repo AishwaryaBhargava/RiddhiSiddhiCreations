@@ -2,7 +2,7 @@
 
 ## Project: RiddhiSiddhi Creations — Website
 
-**Author:** Aishu (for Arpana Bhargava)
+**Author:** Aishu (for Siddhi Bhargava)
 **Version:** 1.0
 **Status:** Draft — Pending Approval
 
@@ -10,12 +10,12 @@
 
 ## 1. Background
 
-Arpana Bhargava is a professionally trained henna artist running a solo practice called
+Siddhi Bhargava is a professionally trained henna artist running a solo practice called
 RiddhiSiddhi Creations. Her work spans bridal mehndi, guest henna, festivals, baby showers,
 and custom client-inspired designs. She uses only organic henna and prides herself on deeply
 personalized, intricate work.
 
-Currently, Arpana's primary digital presence is Instagram (@riddhisiddhicreations22). She has
+Currently, Siddhi's primary digital presence is Instagram (@riddhisiddhicreations22). She has
 no dedicated website. All inquiry and booking coordination happens manually via phone or
 direct message. While Instagram has built her an audience, it does not communicate trust,
 professionalism, or service clarity to first-time visitors the way a dedicated website would.
@@ -24,7 +24,7 @@ professionalism, or service clarity to first-time visitors the way a dedicated w
 
 ## 2. The Problem
 
-Arpana lacks a professional digital home that:
+Siddhi lacks a professional digital home that:
 
 - Establishes trust and credibility with clients who discover her for the first time
 - Showcases the full depth and variety of her artistry in an organized, media-rich format
@@ -42,11 +42,11 @@ information to commit, and move on to an artist with a more established web pres
 The typical visitor is one of the following:
 
 - A bride or her family in the research phase, comparing henna artists for a wedding
-- Someone who found Arpana on Instagram and wants to learn more before reaching out
+- Someone who found Siddhi on Instagram and wants to learn more before reaching out
 - Someone searching "henna artist" online and landing on her site from search results
 
 All three have different levels of intent but share a common need: they want to quickly
-understand who Arpana is, see her work, understand what it costs and how it works, and
+understand who Siddhi is, see her work, understand what it costs and how it works, and
 feel confident enough to send an inquiry.
 
 ---
@@ -55,12 +55,12 @@ feel confident enough to send an inquiry.
 
 Build a multi-page public website for RiddhiSiddhi Creations that:
 
-1. Makes a strong first impression that reflects Arpana's luxury, traditional, and personal brand
+1. Makes a strong first impression that reflects Siddhi's luxury, traditional, and personal brand
 2. Showcases her portfolio through a media-rich gallery (photos and videos)
 3. Communicates her services, pricing ranges, and travel policy clearly
 4. Tells her story in a warm, personal, trust-building way
 5. Captures inquiry submissions via a simple contact form
-   (Arpana follows up personally via phone or text)
+   (Siddhi follows up personally via phone or text)
 
 The website is the MVP. No online payments, no calendar booking, no user accounts.
 
@@ -88,7 +88,7 @@ The website is the MVP. No online payments, no calendar booking, no user account
 
 ## 6. Key Constraints and Notes
 
-- Arpana is available nationwide; travel and accommodation are billed separately
+- Siddhi is available nationwide; travel and accommodation are billed separately
   per standard industry practice
 - All real media (photos, videos) is available and will be provided
 - No backend is required for the MVP; the contact form will use a third-party
@@ -102,8 +102,8 @@ The website is the MVP. No online payments, no calendar booking, no user account
 
 The website is considered successful if:
 
-- A first-time visitor can understand who Arpana is, what she offers, and how to
+- A first-time visitor can understand who Siddhi is, what she offers, and how to
   reach her within 60 seconds of landing on the site
-- The inquiry form is functional and submissions reach Arpana reliably
+- The inquiry form is functional and submissions reach Siddhi reliably
 - The site is fully responsive and performs well on mobile
-- The visual design reflects the quality and elegance of Arpana's work
+- The visual design reflects the quality and elegance of Siddhi's work

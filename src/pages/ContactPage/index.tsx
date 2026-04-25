@@ -8,14 +8,14 @@ function ContactPage() {
     <>
       <SEO
         title="Contact & Booking"
-        description="Book Arpana Bhargava for your next event. Fill out a quick inquiry form and she will be in touch personally. Bridal mehndi, festivals, baby showers, and custom requests."
+        description="Book Siddhi Bhargava for your next event. Fill out a quick inquiry form and she will be in touch personally. Bridal mehndi, festivals, baby showers, and custom requests."
       />
 
       {/* Page header */}
       <section className="py-20 px-6 bg-[radial-gradient(ellipse_60%_60%_at_50%_60%,rgba(201,162,77,0.07)_0%,transparent_65%)]">
         <SectionHeading title="Get in Touch" />
         <p className="font-sans text-ivory/60 text-sm text-center max-w-md mx-auto -mt-6 leading-relaxed">
-          Ready to book or just have questions? Fill in the form below and Arpana will be in touch personally.
+          Ready to book or just have questions? Fill in the form below and Siddhi will be in touch personally.
         </p>
       </section>
 

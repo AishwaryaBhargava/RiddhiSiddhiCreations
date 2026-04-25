@@ -2,7 +2,7 @@
 
 ## Project: RiddhiSiddhi Creations — Website
 
-**Author:** Aishu (for Arpana Bhargava)
+**Author:** Aishu (for Siddhi Bhargava)
 **Version:** 1.0
 **Status:** Draft — Pending Approval
 
@@ -52,7 +52,7 @@ src/assets/
 │   ├── gallery/                   # Henna portfolio photos (WebP + JPG fallback)
 │   ├── instagram/                 # Hand-picked Instagram post thumbnails
 │   ├── hero/                      # Hero section background or feature image
-│   └── about/                     # Arpana's portrait or studio photos
+│   └── about/                     # Siddhi's portrait or studio photos
 ├── videos/
 │   └── reels/                     # Short henna process clips (3-6 videos)
 └── icons/
@@ -77,7 +77,7 @@ src/components/
 ├── home/
 │   ├── Hero.tsx                   # Hero section with tagline and CTA
 │   ├── ValuePillars.tsx           # Organic / Custom / Inspired three-column strip
-│   ├── OccasionsStrip.tsx         # Occasions Arpana serves
+│   ├── OccasionsStrip.tsx         # Occasions Siddhi serves
 │   ├── GalleryPreview.tsx         # 6-image preview grid linking to Gallery page
 │   ├── Testimonials.tsx           # Curated client testimonials carousel
 │   ├── BookingSteps.tsx           # 3-step booking process explainer
@@ -92,7 +92,7 @@ src/components/
 ├── contact/
 │   └── InquiryForm.tsx            # Formspree-connected inquiry form
 └── about/
-    └── ArtistProfile.tsx          # Arpana's story and philosophy section
+    └── ArtistProfile.tsx          # Siddhi's story and philosophy section
 ```
 
 ---

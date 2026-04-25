@@ -12,7 +12,7 @@ function HomePage() {
     <>
       <SEO
         title="Exquisite Henna Art for Your Special Moments"
-        description="RiddhiSiddhi Creations by Arpana Bhargava — professional henna artist specializing in bridal mehndi, custom designs, and organic henna for all occasions. Available nationwide."
+        description="RiddhiSiddhi Creations by Siddhi Bhargava — professional henna artist specializing in bridal mehndi, custom designs, and organic henna for all occasions. Available nationwide."
       />
       <Hero />
       <ValuePillars />

@@ -2,7 +2,7 @@
 
 ## Project: RiddhiSiddhi Creations — Website
 
-**Author:** Aishu (for Arpana Bhargava)
+**Author:** Aishu (for Siddhi Bhargava)
 **Version:** 2.0
 **Status:** Draft — Pending Approval
 
@@ -169,7 +169,7 @@ Build the top half of the Home page covering the hero section and value pillars.
       - Full-viewport dark section
       - Lotus icon centered above the brand name
       - Tagline: "Exquisite Henna Art for Your Special Moments"
-      - Sub-tagline: "By Arpana Bhargava"
+      - Sub-tagline: "By Siddhi Bhargava"
       - Primary CTA button: "Book Your Appointment" linking to Contact page
       - Scroll-reveal entrance animation
 - [ ] Build ValuePillars.tsx
@@ -177,7 +177,7 @@ Build the top half of the Home page covering the hero section and value pillars.
       - Small lotus icon above each pillar
       - Short descriptor text under each
 - [ ] Build OccasionsStrip.tsx
-      - Horizontal strip listing occasions Arpana serves
+      - Horizontal strip listing occasions Siddhi serves
       - Ivory background, gold accents
 - [ ] Assemble these three sections in HomePage/index.tsx
 
@@ -349,7 +349,7 @@ Build the filterable photo gallery with full-screen lightbox viewer.
 
 ### Outcome
 
-Visitors can browse and explore Arpana's portfolio in an elegant filterable gallery.
+Visitors can browse and explore Siddhi's portfolio in an elegant filterable gallery.
 
 ### Notes
 
@@ -431,7 +431,7 @@ A complete media hub with photos, videos, and a curated Instagram preview grid.
 
 ### Goal
 
-Communicate Arpana's service offerings and pricing philosophy clearly.
+Communicate Siddhi's service offerings and pricing philosophy clearly.
 
 ### What We Do
 
@@ -463,9 +463,9 @@ A clear, honest services and pricing page that reduces hesitation before inquiry
 
 ### Notes
 
-- Arpana must review and approve all service descriptions and pricing language
+- Siddhi must review and approve all service descriptions and pricing language
   before this phase is marked complete
-- Use "starting from" language unless Arpana provides exact figures
+- Use "starting from" language unless Siddhi provides exact figures
 
 ### Testing
 
@@ -485,7 +485,7 @@ A clear, honest services and pricing page that reduces hesitation before inquiry
 
 ### Goal
 
-Tell Arpana's story in a warm, personal way that builds trust with first-time visitors.
+Tell Siddhi's story in a warm, personal way that builds trust with first-time visitors.
 
 ### What We Do
 
@@ -507,11 +507,11 @@ Tell Arpana's story in a warm, personal way that builds trust with first-time vi
 
 ### Outcome
 
-A trust-building About page that makes Arpana feel real, credible, and approachable.
+A trust-building About page that makes Siddhi feel real, credible, and approachable.
 
 ### Notes
 
-- All written content must be provided and approved by Arpana before this
+- All written content must be provided and approved by Siddhi before this
   phase is marked complete
 - Keep paragraphs short; first-person tone throughout
 
@@ -523,7 +523,7 @@ A trust-building About page that makes Arpana feel real, credible, and approacha
 
 ### Evaluation
 
-- Content matches Arpana's approved copy
+- Content matches Siddhi's approved copy
 - No image distortion at any breakpoint
 - CTA routes correctly
 
@@ -534,7 +534,7 @@ A trust-building About page that makes Arpana feel real, credible, and approacha
 ### Goal
 
 Provide a clean inquiry form that collects visitor information and delivers
-submissions to Arpana's email via Formspree.
+submissions to Siddhi's email via Formspree.
 
 ### What We Do
 
@@ -547,26 +547,26 @@ submissions to Arpana's email via Formspree.
       - On error: show error message with retry prompt
 - [ ] Assemble ContactPage/index.tsx with a short intro paragraph and the form
 - [ ] Connect Formspree account for inquiry form and update .env with real endpoint
-- [ ] Test a live submission and confirm Arpana receives the email
+- [ ] Test a live submission and confirm Siddhi receives the email
 
 ### Acceptance Criteria
 
 - [ ] All required fields show validation errors if submitted empty
 - [ ] Email field rejects invalid format
 - [ ] Successful submission shows confirmation message
-- [ ] Arpana receives email with all field values after test submission
+- [ ] Siddhi receives email with all field values after test submission
 - [ ] Formspree URL stored in .env, not hardcoded in the component
 - [ ] Fully responsive at all breakpoints
 
 ### Outcome
 
-A functional inquiry form that reliably delivers visitor submissions to Arpana's inbox.
+A functional inquiry form that reliably delivers visitor submissions to Siddhi's inbox.
 
 ### Notes
 
 - Formspree free plan: 50 submissions per month, sufficient for MVP
 - Always use import.meta.env.VITE_FORMSPREE_INQUIRY_URL in the component
-- Arpana must provide her email address to set up the Formspree account
+- Siddhi must provide her email address to set up the Formspree account
 
 ### Testing
 
@@ -579,7 +579,7 @@ A functional inquiry form that reliably delivers visitor submissions to Arpana's
 ### Evaluation
 
 - Zero successful submissions that bypass validation
-- 100% of valid submissions arrive in Arpana's email
+- 100% of valid submissions arrive in Siddhi's email
 - Form renders cleanly at all breakpoints
 
 ---
@@ -612,7 +612,7 @@ Reviews page and as a preview on the Home page.
 - [ ] Update Testimonials.tsx on Home page to show maximum 3 reviews and include
       a "Read All Reviews" link to the Reviews page
 - [ ] Document the curation workflow in a code comment inside testimonials.ts:
-      - Arpana receives review via Formspree email
+      - Siddhi receives review via Formspree email
       - If she approves it, it is added to testimonials.ts manually
       - Only reviews with rating 4 or above are added
 
@@ -621,7 +621,7 @@ Reviews page and as a preview on the Home page.
 - [ ] Review form renders at the bottom of the Contact page
 - [ ] All required fields validate correctly
 - [ ] Permission checkbox blocks submission if unchecked
-- [ ] Arpana receives review submissions via Formspree email
+- [ ] Siddhi receives review submissions via Formspree email
 - [ ] Reviews page renders all entries from testimonials.ts with rating 4 or above
 - [ ] Home page testimonials section shows maximum 3 reviews
 - [ ] "Read All Reviews" link navigates to Reviews page
@@ -643,7 +643,7 @@ Formspree for collection and a curated data file for display.
 ### Testing
 
 - Submit review form without checking permission checkbox and confirm it is blocked
-- Submit a valid review and confirm Arpana receives the email with all fields
+- Submit a valid review and confirm Siddhi receives the email with all fields
 - Add a test review with rating 3 to testimonials.ts and confirm it does not appear
   on the Reviews page or Home page
 - Confirm "Read All Reviews" link on Home page navigates to Reviews page
@@ -651,7 +651,7 @@ Formspree for collection and a curated data file for display.
 ### Evaluation
 
 - Permission checkbox blocks submission 100% of the time when unchecked
-- All valid submissions reach Arpana's inbox
+- All valid submissions reach Siddhi's inbox
 - Rating filter works correctly in all tested cases
 
 ---
@@ -693,7 +693,7 @@ A production-ready site that performs well, is discoverable, and is accessible.
 
 - Alt text should describe the henna design and body part specifically,
   not just say "henna photo"
-- OpenGraph image should be a high-quality crop of Arpana's best work
+- OpenGraph image should be a high-quality crop of Siddhi's best work
 - prefers-reduced-motion check should disable or simplify Framer Motion animations
 
 ### Testing
@@ -734,8 +734,8 @@ Deploy the site to Vercel and confirm everything works end-to-end in production.
 - [ ] Site is live and accessible on the Vercel URL
 - [ ] HTTPS is active with no certificate warnings
 - [ ] All pages load correctly in production
-- [ ] Inquiry form works and Arpana receives the test email
-- [ ] Review form works and Arpana receives the test email
+- [ ] Inquiry form works and Siddhi receives the test email
+- [ ] Review form works and Siddhi receives the test email
 - [ ] No broken links or missing assets on the deployed site
 
 ### Outcome
@@ -747,7 +747,7 @@ RiddhiSiddhi Creations website is live, secured, and ready for visitors.
 - Environment variables set in local .env must be re-entered manually in
   Vercel project settings; they are not read from the committed .env file
 - Custom domain connection is a post-MVP step and is not part of this phase
-- After launch, walk Arpana through the Formspree dashboard so she knows
+- After launch, walk Siddhi through the Formspree dashboard so she knows
   where to view all submissions
 
 ### Testing
@@ -760,6 +760,6 @@ RiddhiSiddhi Creations website is live, secured, and ready for visitors.
 ### Evaluation
 
 - Zero 404 errors across all pages and assets
-- Both forms deliver 100% of test submissions to Arpana's inbox
+- Both forms deliver 100% of test submissions to Siddhi's inbox
 - SSL active with no mixed-content warnings
 - Site renders correctly on iPhone Safari and Android Chrome

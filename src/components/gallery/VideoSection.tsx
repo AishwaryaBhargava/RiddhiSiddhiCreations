@@ -2,7 +2,7 @@ import SectionHeading from '../ui/SectionHeading'
 import VideoCard from './VideoCard'
 
 const videos: { id: string; src: string; poster?: string; title: string }[] = [
-  // Add real video files once Arpana provides them
+  // Add real video files once Siddhi provides them
   // Example:
   // { id: '1', src: '/src/assets/videos/reels/reel-1.mp4', poster: '/src/assets/images/hero/poster-1.jpg', title: 'Bridal Application' },
 ]

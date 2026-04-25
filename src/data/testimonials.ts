@@ -11,7 +11,7 @@ export const testimonials: Testimonial[] = [
     id: '1',
     name: 'Priya S.',
     occasion: 'Bridal',
-    review: 'Absolutely stunning henna for my wedding. Arpana truly listened to every detail and made me feel so special throughout.',
+    review: 'Absolutely stunning henna for my wedding. Siddhi truly listened to every detail and made me feel so special throughout.',
     rating: 5,
   },
   {

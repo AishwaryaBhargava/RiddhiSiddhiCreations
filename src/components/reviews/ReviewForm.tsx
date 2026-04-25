@@ -69,7 +69,7 @@ function ReviewForm() {
         </div>
         <h3 className="font-serif italic text-ivory text-3xl">Thank You</h3>
         <p className="font-sans text-ivory/60 text-sm max-w-sm leading-relaxed">
-          Your review has been received. Arpana will read it personally and it may be featured on the site.
+          Your review has been received. Siddhi will read it personally and it may be featured on the site.
         </p>
         <button
           onClick={() => setSubmitted(false)}
@@ -156,7 +156,7 @@ function ReviewForm() {
         <textarea
           {...register('review')}
           rows={5}
-          placeholder="Share your experience with Arpana and RiddhiSiddhi Creations..."
+          placeholder="Share your experience with Siddhi and RiddhiSiddhi Creations..."
           className={`${inputClass} resize-none`}
         />
         {errors.review && <span className={errorClass}>{errors.review.message}</span>}

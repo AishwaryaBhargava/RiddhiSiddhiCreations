@@ -64,7 +64,7 @@ function Footer() {
 
         {/* Copyright */}
         <p className="font-sans text-[10px] tracking-[2px] uppercase text-ivory/50 text-center w-full">
-            © {new Date().getFullYear()} RiddhiSiddhi Creations · by Arpana Bhargava
+            © {new Date().getFullYear()} RiddhiSiddhi Creations · by Siddhi Bhargava
         </p>
 
       </div>

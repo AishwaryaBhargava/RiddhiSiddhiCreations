@@ -45,7 +45,7 @@ export const services: Service[] = [
     id: '5',
     name: 'Custom Requests',
     description:
-      'Have a Pinterest board, a reference image, or a unique idea? Arpana will recreate your vision and blend it with her artistry to create something truly one of a kind.',
+      'Have a Pinterest board, a reference image, or a unique idea? Siddhi will recreate your vision and blend it with her artistry to create something truly one of a kind.',
     duration: 'Varies by design',
     price: 'Request a Quote',
   },

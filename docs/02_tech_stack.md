@@ -2,7 +2,7 @@
 
 ## Project: RiddhiSiddhi Creations — Website
 
-**Author:** Aishu (for Arpana Bhargava)
+**Author:** Aishu (for Siddhi Bhargava)
 **Version:** 1.0
 **Status:** Draft — Pending Approval
 
@@ -35,7 +35,7 @@ or via third-party services.
 
 | Layer           | Choice      | Reason                                                                         |
 |-----------------|-------------|--------------------------------------------------------------------------------|
-| Form handling   | Formspree   | No backend needed; submissions delivered to Arpana's email automatically       |
+| Form handling   | Formspree   | No backend needed; submissions delivered to Siddhi's email automatically       |
 | Form validation | React Hook Form + Zod | Client-side validation before submission; clear error states         |
 
 ---
@@ -56,7 +56,7 @@ or via third-party services.
 | Layer       | Choice   | Reason                                                                 |
 |-------------|----------|------------------------------------------------------------------------|
 | Frontend    | Vercel   | Free tier, instant deploys from GitHub, excellent performance globally |
-| Domain      | Custom   | Connected via Vercel DNS settings (domain to be provided by Arpana)   |
+| Domain      | Custom   | Connected via Vercel DNS settings (domain to be provided by Siddhi)   |
 | SSL         | Vercel   | Automatic HTTPS out of the box                                         |
 
 ---

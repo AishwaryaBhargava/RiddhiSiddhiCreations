@@ -6,7 +6,7 @@ export interface GalleryImage {
 }
 
 export const galleryImages: GalleryImage[] = [
-  // Images will be added here once Arpana provides them
+  // Images will be added here once Siddhi provides them
   // Example:
   // {
   //   id: '1',

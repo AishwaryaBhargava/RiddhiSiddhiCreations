@@ -1,6 +1,6 @@
 # RiddhiSiddhi Creations — Website
 
-**For Arpana Bhargava**
+**For Siddhi Bhargava**
 **Built by Aishwarya Bhargava**
 
 ---
@@ -8,7 +8,7 @@
 ## What This Is
 
 A multi-page marketing website for RiddhiSiddhi Creations, a professional henna
-artistry business run by Arpana Bhargava. The site serves as Arpana's primary
+artistry business run by Siddhi Bhargava. The site serves as Siddhi's primary
 digital presence, helping potential clients discover her work, understand her
 services, and reach out for bookings.
 
@@ -27,7 +27,7 @@ Deployed on Vercel at: (to be added after launch)
 | Home         | /          | First impression, portfolio preview, social proof    |
 | Gallery      | /gallery   | Full photo grid, video previews, Instagram grid      |
 | Services     | /services  | Service offerings, pricing philosophy, travel policy |
-| About        | /about     | Arpana's story, training, and philosophy             |
+| About        | /about     | Siddhi's story, training, and philosophy             |
 | Contact      | /contact   | Booking inquiry form and review submission form      |
 | Reviews      | /reviews   | All approved client reviews (4 stars and above)      |
 
@@ -119,12 +119,12 @@ in the Vercel project settings before deploying.
 
 ### Inquiry Form (Contact page)
 When a visitor fills out the booking inquiry form, the submission is sent to
-Formspree which delivers it as an email to Arpana's inbox. She follows up
+Formspree which delivers it as an email to Siddhi's inbox. She follows up
 directly via phone or text.
 
 ### Review Form (Contact page, bottom section)
-When a past client submits a review, it is delivered to Arpana's inbox via
-Formspree. Arpana reads the review and rating. If she approves it for display,
+When a past client submits a review, it is delivered to Siddhi's inbox via
+Formspree. Siddhi reads the review and rating. If she approves it for display,
 it is manually added to `src/data/testimonials.ts`. Only reviews with a rating
 of 4 or above are added. There is no automated approval flow.
 
@@ -190,5 +190,5 @@ These features are intentionally out of scope for the initial launch:
 ## Contact
 
 Business: RiddhiSiddhi Creations
-Artist: Arpana Bhargava
+Artist: Siddhi Bhargava
 Instagram: @riddhisiddhicreations22

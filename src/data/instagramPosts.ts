@@ -6,7 +6,7 @@ export interface InstagramPost {
 }
 
 export const instagramPosts: InstagramPost[] = [
-  // Add real posts once Arpana provides them
+  // Add real posts once Siddhi provides them
   // Example:
   // {
   //   id: '1',

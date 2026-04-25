@@ -10,7 +10,7 @@ const steps = [
   {
     number: '2',
     title: 'Discuss Your Vision',
-    description: 'Arpana will connect with you personally to understand your style and design preferences.',
+    description: 'Siddhi will connect with you personally to understand your style and design preferences.',
   },
   {
     number: '3',

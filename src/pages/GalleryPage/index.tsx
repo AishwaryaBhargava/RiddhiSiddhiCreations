@@ -8,7 +8,7 @@ function GalleryPage() {
     <>
       <SEO
         title="Gallery"
-        description="Browse the henna artistry of Arpana Bhargava — bridal mehndi, festival designs, baby shower henna, and custom creations. View photos, videos, and Instagram highlights."
+        description="Browse the henna artistry of Siddhi Bhargava — bridal mehndi, festival designs, baby shower henna, and custom creations. View photos, videos, and Instagram highlights."
       />
       <PhotoGrid />
       <VideoSection />

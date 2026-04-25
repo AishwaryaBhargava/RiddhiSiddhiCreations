@@ -70,7 +70,7 @@ function PricingInfo() {
                 Travel Policy
               </h4>
               <p className="font-sans text-[13px] text-[#6a6460] leading-relaxed">
-                Arpana is available nationwide for all events. Travel and accommodation
+                Siddhi is available nationwide for all events. Travel and accommodation
                 are billed separately based on distance and duration. Final pricing is
                 always confirmed personally during your inquiry.
               </p>
@@ -81,7 +81,7 @@ function PricingInfo() {
         {/* Disclaimer */}
         <p className="font-sans text-[11px] text-[#9a9490] text-center leading-relaxed">
           All prices shown are starting rates. Final quotes are discussed and confirmed
-          personally with Arpana based on your specific requirements.
+          personally with Siddhi based on your specific requirements.
         </p>
 
       </div>

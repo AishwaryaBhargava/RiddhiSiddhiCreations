@@ -11,7 +11,7 @@ const promises = [
 const storyBlocks = [
   {
     title: 'My Story',
-    body: 'What started as a quiet passion for mehndi has grown into something far more meaningful. I am Arpana — a professionally trained henna artist who fell in love with this craft not just for its beauty, but for the stories it tells. Every pattern I draw carries a piece of the person wearing it.',
+    body: 'What started as a quiet passion for mehndi has grown into something far more meaningful. I am Siddhi — a professionally trained henna artist who fell in love with this craft not just for its beauty, but for the stories it tells. Every pattern I draw carries a piece of the person wearing it.',
   },
   {
     title: 'My Training',
@@ -63,7 +63,7 @@ function ArtistProfile() {
               The Artist
             </span>
             <h2 className="font-serif italic text-ivory text-4xl font-500 leading-tight mb-2">
-              Arpana Bhargava
+              Siddhi Bhargava
             </h2>
             <div className="flex items-center gap-3 mb-8">
               <div className="w-8 h-px bg-gold opacity-40" />

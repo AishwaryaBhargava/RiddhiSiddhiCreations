@@ -11,7 +11,7 @@ const pillars = [
   },
   {
     title: 'Inspired Creations',
-    description: 'Share your Pinterest board or a reference image. Arpana will bring your vision to life.',
+    description: 'Share your Pinterest board or a reference image. Siddhi will bring your vision to life.',
   },
 ]
 

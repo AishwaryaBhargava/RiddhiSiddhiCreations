@@ -13,14 +13,14 @@ function ReviewsPage() {
     <>
       <SEO
         title="Client Reviews"
-        description="Read real reviews from happy clients of RiddhiSiddhi Creations. Bridal mehndi, festival henna, baby showers, and more. Share your own experience with Arpana."
+        description="Read real reviews from happy clients of RiddhiSiddhi Creations. Bridal mehndi, festival henna, baby showers, and more. Share your own experience with Siddhi."
       />
 
       {/* Page header */}
       <section className="py-20 px-6 bg-[radial-gradient(ellipse_60%_60%_at_50%_60%,rgba(201,162,77,0.07)_0%,transparent_65%)]">
         <SectionHeading title="Client Reviews" />
         <p className="font-sans text-ivory/60 text-sm text-center max-w-md mx-auto -mt-6 leading-relaxed">
-          Every review is from a real client, personally read and approved by Arpana.
+          Every review is from a real client, personally read and approved by Siddhi.
         </p>
       </section>
 

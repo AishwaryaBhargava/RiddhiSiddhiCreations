@@ -12,7 +12,7 @@ const schema = z.object({
   duration: z.string().optional(),
   location: z.string().min(2, 'Please enter your event location'),
   inspiration: z.string().optional(),
-  message: z.string().min(10, 'Please tell Arpana a little more about your vision'),
+  message: z.string().min(10, 'Please tell Siddhi a little more about your vision'),
 }).refine((data) => data.email || data.phone, {
   message: 'Please provide at least an email or phone number',
   path: ['email'],
@@ -83,7 +83,7 @@ function InquiryForm() {
         </div>
         <h3 className="font-serif italic text-ivory text-3xl">Thank You</h3>
         <p className="font-sans text-ivory/60 text-sm max-w-sm leading-relaxed">
-          Your inquiry has been received. Arpana will be in touch with you personally very soon.
+          Your inquiry has been received. Siddhi will be in touch with you personally very soon.
         </p>
         <button
           onClick={() => setSubmitted(false)}
@@ -277,7 +277,7 @@ function InquiryForm() {
           <textarea
             {...register('message')}
             rows={5}
-            placeholder="Tell Arpana about your vision, any design ideas, or anything else she should know..."
+            placeholder="Tell Siddhi about your vision, any design ideas, or anything else she should know..."
             className={`${inputClass} resize-none`}
           />
           {errors.message && <span className={errorClass}>{errors.message.message}</span>}

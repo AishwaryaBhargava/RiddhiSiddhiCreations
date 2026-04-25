@@ -11,7 +11,7 @@ function ServicesPage() {
     <>
       <SEO
         title="Services & Pricing"
-        description="Henna services by Arpana Bhargava including bridal mehndi, guest henna, festival designs, baby shower, and custom requests. Organic henna. Available nationwide."
+        description="Henna services by Siddhi Bhargava including bridal mehndi, guest henna, festival designs, baby shower, and custom requests. Organic henna. Available nationwide."
       />
 
       {/* Page header */}

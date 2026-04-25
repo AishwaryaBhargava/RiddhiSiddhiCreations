@@ -8,13 +8,13 @@ function AboutPage() {
   return (
     <>
       <SEO
-        title="About Arpana"
-        description="Meet Arpana Bhargava — professionally trained henna artist, founder of RiddhiSiddhi Creations. 100+ happy clients, organic henna, and designs that tell your story."
+        title="About Siddhi"
+        description="Meet Siddhi Bhargava — professionally trained henna artist, founder of RiddhiSiddhi Creations. 100+ happy clients, organic henna, and designs that tell your story."
       />
 
       {/* Page header */}
       <section className="py-20 px-6 bg-[radial-gradient(ellipse_60%_60%_at_50%_60%,rgba(201,162,77,0.07)_0%,transparent_65%)]">
-        <SectionHeading title="About Arpana" />
+        <SectionHeading title="About Siddhi" />
       </section>
 
       {/* Artist profile */}
@@ -40,7 +40,7 @@ function AboutPage() {
             "I do not just draw on skin — I capture your story, your personality, and your moment. That is what makes every design unrepeatable."
           </blockquote>
           <span className="font-sans text-[10px] tracking-[3px] uppercase text-gold">
-            Arpana Bhargava
+            Siddhi Bhargava
           </span>
         </motion.div>
       </section>
