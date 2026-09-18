@@ -101,7 +101,7 @@ responsiveness and brand styling.
       - Business name and tagline
       - Navigation links
       - Instagram handle linking to @riddhisiddhicreations22
-      - Phone number: 484-995-2444
+      - Phone number: +1 (484) 995-2144
       - Copyright line
 - [ ] Build PageWrapper.tsx
       - Consistent horizontal padding and max-width container

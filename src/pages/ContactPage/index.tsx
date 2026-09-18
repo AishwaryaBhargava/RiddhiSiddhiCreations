@@ -2,6 +2,7 @@ import { motion } from 'framer-motion'
 import SEO from '../../components/ui/SEO'
 import PageHeader from '../../components/ui/PageHeader'
 import InquiryForm from '../../components/contact/InquiryForm'
+import { contact } from '../../data/contact'
 
 function ContactPage() {
   return (
@@ -36,9 +37,9 @@ function ContactPage() {
 
           <p className="font-sans text-[12px] text-wine-700/70 text-center mt-6 leading-relaxed">
             Prefer to reach out directly?&nbsp;
-            <a href="tel:4849952444" className="text-rose-600 hover:text-wine-800 transition-colors">484-995-2444</a>
+            <a href={contact.phoneHref} className="text-rose-600 hover:text-wine-800 transition-colors">{contact.phoneDisplay}</a>
             &nbsp;or&nbsp;
-            <a href="mailto:bhargavasiddhi@gmail.com" className="text-rose-600 hover:text-wine-800 transition-colors">bhargavasiddhi@gmail.com</a>
+            <a href={`mailto:${contact.email}`} className="text-rose-600 hover:text-wine-800 transition-colors">{contact.email}</a>
           </p>
         </motion.div>
       </section>

@@ -107,9 +107,26 @@ Create a `.env` file in the root of the project with the following:
 ```
 VITE_FORMSPREE_INQUIRY_URL=your_inquiry_form_id_here
 VITE_FORMSPREE_REVIEW_URL=your_review_form_id_here
+
+# Optional: lets clients attach reference images to the inquiry form
+VITE_CLOUDINARY_CLOUD_NAME=your_cloud_name_here
+VITE_CLOUDINARY_UPLOAD_PRESET=your_unsigned_preset_here
 ```
 
 These values are available from the Formspree dashboard after creating the forms.
+
+### Reference-image uploads (optional)
+
+Formspree only accepts file uploads on paid plans, so the inquiry form uploads
+images to Cloudinary (free tier) from the browser and sends the resulting links
+with the submission. To switch it on:
+
+1. Create a free account at cloudinary.com and note the **cloud name**.
+2. Settings → Upload → Upload presets → Add preset. Set *Signing mode* to
+   **Unsigned**, optionally set a folder such as `riddhisiddhi/inquiries`, and save.
+3. Put the cloud name and preset name in `.env` (and in Vercel's environment
+   settings). Until both are set, the form shows the attachment field as
+   "being set up" and clients can still share a link instead.
 Never commit the `.env` file to Git. Both variables must also be added manually
 in the Vercel project settings before deploying.
 

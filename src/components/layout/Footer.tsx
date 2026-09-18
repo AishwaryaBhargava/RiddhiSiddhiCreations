@@ -1,6 +1,7 @@
 import { Mail, Phone } from 'lucide-react'
 import logo from '../../assets/icons/logo.webp'
 import Ornament from '../ui/Ornament'
+import { contact } from '../../data/contact'
 
 /* lucide-react no longer ships brand icons, so Instagram is an inline glyph */
 function InstagramIcon() {
@@ -28,19 +29,19 @@ function Footer() {
 
         {/* Contact row */}
         <div className="flex flex-wrap justify-center items-center gap-x-7 gap-y-2">
-          <a href="https://instagram.com/riddhisiddhicreations22" target="_blank" rel="noopener noreferrer" className={linkClass}>
+          <a href={contact.instagramUrl} target="_blank" rel="noopener noreferrer" className={linkClass}>
             <InstagramIcon />
-            <span className="font-sans text-[12px] tracking-wide">@riddhisiddhicreations22</span>
+            <span className="font-sans text-[12px] tracking-wide">{contact.instagramHandle}</span>
           </a>
           <span className="text-marigold-600/50 hidden sm:block">•</span>
-          <a href="mailto:bhargavasiddhi@gmail.com" className={linkClass}>
+          <a href={`mailto:${contact.email}`} className={linkClass}>
             <Mail size={14} strokeWidth={1.5} />
-            <span className="font-sans text-[12px] tracking-wide">bhargavasiddhi@gmail.com</span>
+            <span className="font-sans text-[12px] tracking-wide">{contact.email}</span>
           </a>
           <span className="text-marigold-600/50 hidden sm:block">•</span>
-          <a href="tel:4849952444" className={linkClass}>
+          <a href={contact.phoneHref} className={linkClass}>
             <Phone size={14} strokeWidth={1.5} />
-            <span className="font-sans text-[12px] tracking-wide">484-995-2444</span>
+            <span className="font-sans text-[12px] tracking-wide">{contact.phoneDisplay}</span>
           </a>
         </div>
 

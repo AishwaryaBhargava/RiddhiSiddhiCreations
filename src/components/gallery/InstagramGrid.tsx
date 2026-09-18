@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { instagramPosts } from '../../data/instagramPosts'
 import SectionHeading from '../ui/SectionHeading'
+import { contact } from '../../data/contact'
 
 function InstagramIcon({ size = 14, className = '' }: { size?: number; className?: string }) {
   return (
@@ -58,13 +59,13 @@ function InstagramGrid() {
 
       <div className="flex flex-col items-center gap-3">
         <a
-          href="https://instagram.com/riddhisiddhicreations22"
+          href={contact.instagramUrl}
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center gap-2 font-sans text-[11px] font-medium tracking-[2.5px] uppercase text-rose-600 hover:text-wine-800 transition-colors duration-300"
         >
           <InstagramIcon />
-          Follow @riddhisiddhicreations22
+          Follow {contact.instagramHandle}
         </a>
       </div>
     </section>

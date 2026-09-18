@@ -4,6 +4,9 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import { useState } from 'react'
 import { ChevronDown, Check } from 'lucide-react'
 import Button from '../ui/Button'
+import ImageAttach from './ImageAttach'
+import { uploadImages, isUploadConfigured } from '../../lib/uploadImages'
+import { contact } from '../../data/contact'
 import { inputClass, labelClass, optionalClass, errorClass, requiredMark } from '../ui/formStyles'
 
 const schema = z.object({
@@ -35,7 +38,9 @@ const occasions = [
 
 function InquiryForm() {
   const [submitted, setSubmitted] = useState(false)
-  const [error, setError] = useState(false)
+  const [error, setError] = useState<string | null>(null)
+  const [files, setFiles] = useState<File[]>([])
+  const [uploading, setUploading] = useState(false)
   const [selectOpen, setSelectOpen] = useState(false)
   const [selectedOccasion, setSelectedOccasion] = useState('')
 
@@ -48,23 +53,44 @@ function InquiryForm() {
   } = useForm<FormData>({ resolver: zodResolver(schema) })
 
   const onSubmit = async (data: FormData) => {
-    setError(false)
+    setError(null)
+
+    /* Reference images go to the image host first; their links travel with the form */
+    let referenceImages: string[] = []
+    if (files.length > 0 && isUploadConfigured()) {
+      setUploading(true)
+      try {
+        referenceImages = await uploadImages(files)
+      } catch {
+        setUploading(false)
+        setError('We could not upload your images. Please try again, or remove them and share a link instead.')
+        return
+      }
+      setUploading(false)
+    }
+
     try {
       const endpoint = import.meta.env.VITE_FORMSPREE_INQUIRY_URL
+      const payload = {
+        ...data,
+        referenceImages: referenceImages.join('\n'),
+        referenceImageCount: referenceImages.length,
+      }
       const res = await fetch(`https://formspree.io/f/${endpoint}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-        body: JSON.stringify(data),
+        body: JSON.stringify(payload),
       })
       if (res.ok) {
         setSubmitted(true)
         reset()
         setSelectedOccasion('')
+        setFiles([])
       } else {
-        setError(true)
+        setError(`Something went wrong. Please try again or reach out directly at ${contact.email}`)
       }
     } catch {
-      setError(true)
+      setError(`Something went wrong. Please try again or reach out directly at ${contact.email}`)
     }
   }
 
@@ -198,6 +224,14 @@ function InquiryForm() {
         <input {...register('inspiration')} placeholder="Pinterest board, Instagram post, or any reference link" className={inputClass} />
       </div>
 
+      {/* Reference images */}
+      <div className="flex flex-col gap-1.5">
+        <label className={labelClass}>
+          Reference Images <span className={optionalClass}>(optional)</span>
+        </label>
+        <ImageAttach files={files} onChange={setFiles} />
+      </div>
+
       {/* Message */}
       <div className="flex flex-col gap-1.5">
         <label className={labelClass}>Message {requiredMark}</label>
@@ -211,14 +245,12 @@ function InquiryForm() {
       </div>
 
       {error && (
-        <p className="font-sans text-[12px] text-rose-700 text-center">
-          Something went wrong. Please try again or reach out directly at bhargavasiddhi@gmail.com
-        </p>
+        <p className="font-sans text-[12px] text-rose-700 text-center">{error}</p>
       )}
 
       <div>
-        <Button type="submit" variant="solid" disabled={isSubmitting}>
-          {isSubmitting ? 'Sending...' : 'Request Booking'}
+        <Button type="submit" variant="solid" disabled={isSubmitting || uploading}>
+          {uploading ? 'Uploading images...' : isSubmitting ? 'Sending...' : 'Request Booking'}
         </Button>
       </div>
     </form>
