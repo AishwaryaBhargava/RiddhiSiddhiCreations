@@ -2,12 +2,13 @@
 @import '@fontsource/outfit/400.css';
 @import '@fontsource/outfit/500.css';
 @import '@fontsource/outfit/600.css';
-@import '@fontsource/playfair-display/400.css';
-@import '@fontsource/playfair-display/400-italic.css';
-@import '@fontsource/playfair-display/500.css';
-@import '@fontsource/playfair-display/500-italic.css';
-@import '@fontsource/playfair-display/600.css';
-@import '@fontsource/playfair-display/600-italic.css';
+@import '@fontsource/cinzel/400.css';
+@import '@fontsource/cinzel/500.css';
+@import '@fontsource/cinzel/600.css';
+@import '@fontsource/cormorant-garamond/400.css';
+@import '@fontsource/cormorant-garamond/400-italic.css';
+@import '@fontsource/cormorant-garamond/500-italic.css';
+@import '@fontsource/cormorant-garamond/600.css';
 @import './styles/theme.css';
 
 @tailwind base;
@@ -25,8 +26,8 @@ html {
 }
 
 body {
-  background-color: #0A0A0A;
-  color: #FAF7F2;
+  background-color: #FAF6EA;
+  color: #3E0818;
   font-family: 'Outfit', sans-serif;
   font-weight: 300;
   line-height: 1.65;
@@ -34,6 +35,6 @@ body {
 }
 
 :focus-visible {
-  outline: 1px solid rgba(201, 162, 77, 0.7);
+  outline: 2px solid rgba(184, 51, 95, 0.6);
   outline-offset: 2px;
 }

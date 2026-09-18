@@ -1,29 +1,29 @@
 import { motion } from 'framer-motion'
 import SEO from '../../components/ui/SEO'
+import PageHeader from '../../components/ui/PageHeader'
 import ArtistProfile from '../../components/about/ArtistProfile'
-import Button from '../../components/ui/Button'
-import SectionHeading from '../../components/ui/SectionHeading'
+import Ornament from '../../components/ui/Ornament'
+import CTABand from '../../components/ui/CTABand'
 
 function AboutPage() {
   return (
     <>
       <SEO
         title="About Siddhi"
-        description="Meet Siddhi Bhargava — professionally trained henna artist, founder of RiddhiSiddhi Creations. 100+ happy clients, organic henna, and designs that tell your story."
+        description="Meet Siddhi Bhargava — professionally trained henna artist, founder of Riddhi Siddhi Creations. 100+ happy clients, organic henna, and designs that tell your story."
+      />
+      <PageHeader
+        overline="The Artist"
+        title="About Siddhi"
+        intro="A professionally trained henna artist with a deep-rooted love for mehndi and the stories it tells."
       />
 
-      {/* Page header */}
-      <section className="py-20 px-6 bg-[radial-gradient(ellipse_60%_60%_at_50%_60%,rgba(201,162,77,0.07)_0%,transparent_65%)]">
-        <SectionHeading title="About Siddhi" />
-      </section>
-
-      {/* Artist profile */}
-      <section className="border-t border-gold/10 bg-[radial-gradient(ellipse_80%_60%_at_50%_40%,rgba(201,162,77,0.05)_0%,transparent_65%)]">
+      <section className="bg-cream">
         <ArtistProfile />
       </section>
 
       {/* Philosophy quote */}
-      <section className="py-20 px-6 bg-ivory border-t border-gold/15">
+      <section className="py-20 px-6 bg-sage-50 border-y border-sage/40">
         <motion.div
           className="max-w-2xl mx-auto text-center"
           initial={{ opacity: 0, y: 16 }}
@@ -31,37 +31,18 @@ function AboutPage() {
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
         >
-          <div className="flex items-center justify-center gap-3 mb-8">
-            <div className="w-10 h-px bg-gold opacity-35" />
-            <div className="w-1.5 h-1.5 bg-gold rotate-45 opacity-70" />
-            <div className="w-10 h-px bg-gold opacity-35" />
-          </div>
-          <blockquote className="font-serif italic text-[#1a1410] text-2xl md:text-3xl font-400 leading-relaxed mb-8">
-            "I do not just draw on skin — I capture your story, your personality, and your moment. That is what makes every design unrepeatable."
+          <Ornament className="mb-8" />
+          <blockquote className="font-cormorant italic text-wine-800 text-2xl md:text-3xl leading-relaxed mb-6">
+            &ldquo;I do not just draw on skin. I capture your story, your personality, and your moment.
+            That is what makes every design unrepeatable.&rdquo;
           </blockquote>
-          <span className="font-sans text-[10px] tracking-[3px] uppercase text-gold">
+          <span className="font-sans text-[10px] font-medium tracking-[3px] uppercase text-rose-600">
             Siddhi Bhargava
           </span>
         </motion.div>
       </section>
 
-      {/* CTA */}
-      <section className="py-20 px-6 border-t border-gold/10 bg-[radial-gradient(ellipse_50%_70%_at_50%_50%,rgba(201,162,77,0.07)_0%,transparent_65%)]">
-        <motion.div
-          className="flex flex-col items-center gap-6 text-center"
-          initial={{ opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
-          <h2 className="font-serif italic text-ivory text-4xl font-500 max-w-lg leading-tight">
-            Let your hands tell your story
-          </h2>
-          <Button to="/contact" variant="outline">
-            Get in Touch
-          </Button>
-        </motion.div>
-      </section>
+      <CTABand title="Let your hands tell your story" label="Get in Touch" fromColor="#F4F5EA" />
     </>
   )
 }

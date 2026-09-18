@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+<style>@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&amp;display=swap');</style>
+<rect width="400" height="400" fill="#FBF6E9"/>
+<rect x="14" y="14" width="372" height="372" fill="none" stroke="#C4942F" stroke-width="1.6"/>
+<rect x="22" y="22" width="356" height="356" fill="none" stroke="#C4942F" stroke-width="1" stroke-dasharray="1 5" stroke-linecap="round" opacity="0.9"/>
+<!-- medallion, top -->
+<circle cx="200" cy="128" r="84" fill="none" stroke="#C4942F" stroke-width="1.4"/>
+<circle cx="200" cy="128" r="75" fill="none" stroke="#C4942F" stroke-width="1.1" stroke-dasharray="1 6" stroke-linecap="round"/>
+<path d="M 0 -50 Q 4 -56.0 0 -62 Q -4 -56.0 0 -50 Z" fill="none" stroke="#C4942F" stroke-width="1.3" transform="translate(200 128) rotate(140.0)"/>
+<path d="M 0 -54 L 0 -57" stroke="#C4942F" stroke-width="0.8" opacity="0.7" transform="translate(200 128) rotate(140.0)"/>
+<path d="M 0 -50 Q 4 -56.0 0 -62 Q -4 -56.0 0 -50 Z" fill="none" stroke="#C4942F" stroke-width="1.3" transform="translate(200 128) rotate(153.33333333333334)"/>
+<path d="M 0 -54 L 0 -57" stroke="#C4942F" stroke-width="0.8" opacity="0.7" transform="translate(200 128) rotate(153.33333333333334)"/>
+<circle cx="0" cy="-66" r="1.4" fill="#C0125C" transform="translate(200 128) rotate(153.33333333333334)"/>
+<path d="M 0 -50 Q 4 -56.0 0 -62 Q -4 -56.0 0 -50 Z" fill="none" stroke="#C4942F" stroke-width="1.3" transform="translate(200 128) rotate(166.66666666666666)"/>
+<path d="M 0 -54 L 0 -57" stroke="#C4942F" stroke-width="0.8" opacity="0.7" transform="translate(200 128) rotate(166.66666666666666)"/>
+<path d="M 0 -50 Q 4 -56.0 0 -62 Q -4 -56.0 0 -50 Z" fill="none" stroke="#C4942F" stroke-width="1.3" transform="translate(200 128) rotate(180.0)"/>
+<path d="M 0 -54 L 0 -57" stroke="#C4942F" stroke-width="0.8" opacity="0.7" transform="translate(200 128) rotate(180.0)"/>
+<circle cx="0" cy="-66" r="1.4" fill="#C0125C" transform="translate(200 128) rotate(180.0)"/>
+<path d="M 0 -50 Q 4 -56.0 0 -62 Q -4 -56.0 0 -50 Z" fill="none" stroke="#C4942F" stroke-width="1.3" transform="translate(200 128) rotate(193.33333333333334)"/>
+<path d="M 0 -54 L 0 -57" stroke="#C4942F" stroke-width="0.8" opacity="0.7" transform="translate(200 128) rotate(193.33333333333334)"/>
+<path d="M 0 -50 Q 4 -56.0 0 -62 Q -4 -56.0 0 -50 Z" fill="none" stroke="#C4942F" stroke-width="1.3" transform="translate(200 128) rotate(206.66666666666669)"/>
+<path d="M 0 -54 L 0 -57" stroke="#C4942F" stroke-width="0.8" opacity="0.7" transform="translate(200 128) rotate(206.66666666666669)"/>
+<circle cx="0" cy="-66" r="1.4" fill="#C0125C" transform="translate(200 128) rotate(206.66666666666669)"/>
+<path d="M 0 -50 Q 4 -56.0 0 -62 Q -4 -56.0 0 -50 Z" fill="none" stroke="#C4942F" stroke-width="1.3" transform="translate(200 128) rotate(220.0)"/>
+<path d="M 0 -54 L 0 -57" stroke="#C4942F" stroke-width="0.8" opacity="0.7" transform="translate(200 128) rotate(220.0)"/>
+
+<g transform="translate(182 56) scale(0.9)">
+  <!-- cone: drawn tip-at-origin pointing right, then rotated to point lower-left -->
+  <g transform="translate(30 70) rotate(-38)">
+    <path d="M 0 0 L 74 -12 L 74 12 Z" fill="#6B3A1E"/>
+    <path d="M 0 0 L 74 -12 L 74 -4 Z" fill="#8A4B22" opacity="0.55"/>
+    <path d="M 0 0 L 10 -1.6 L 10 1.6 Z" fill="#C4942F"/>
+    <path d="M 44 -7 L 44 7" stroke="#C4942F" stroke-width="2.6" stroke-linecap="round"/>
+    <path d="M 52 -8.2 L 52 8.2" stroke="#E1B458" stroke-width="1.2" stroke-linecap="round" opacity="0.9"/>
+    <!-- crimped end -->
+    <rect x="72" y="-15" width="10" height="30" rx="2.5" fill="#8A4B22" stroke="#C4942F" stroke-width="1.2"/>
+    <path d="M 75.5 -11 L 75.5 11 M 78.5 -11 L 78.5 11" stroke="#C4942F" stroke-width="0.9" opacity="0.8"/>
+  </g>
+  <!-- mehndi trail from the tip -->
+  <path d="M 30 70 C 22 76, 10 74, 6 82 C 2 90, 10 96, 18 92 C 26 88, 22 80, 14 82" fill="none" stroke="#6B3A1E" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M 6 82 C -2 86, -12 84, -16 92" fill="none" stroke="#6B3A1E" stroke-width="1.4" stroke-linecap="round"/>
+  <!-- paisley at the end of the trail -->
+  <path d="M -16 92 C -26 90, -34 100, -28 108 C -22 114, -12 110, -12 102 C -12 98, -14 95, -16 92 Z" fill="none" stroke="#6B3A1E" stroke-width="1.4"/>
+  <path d="M -19 97 C -25 97, -28 103, -24 106 C -20 108, -17 104, -18 100 Z" fill="none" stroke="#6B3A1E" stroke-width="1"/>
+  <!-- leaves along the trail -->
+  <path d="M 20 74 q 4 -7 11 -5 q -3 7 -11 5 z" fill="#6B3A1E"/>
+  <path d="M 10 77 q -7 -3 -9 -10 q 7 2 9 10 z" fill="#6B3A1E"/>
+  <path d="M 14 94 q 1 7 -5 11 q -2 -7 5 -11 z" fill="#6B3A1E"/>
+  <path d="M -6 84 q -3 -7 3 -11 q 3 6 -3 11 z" fill="#6B3A1E"/>
+  <!-- dots -->
+  <circle cx="24" cy="84" r="1.5" fill="#C4942F"/>
+  <circle cx="2" cy="94" r="1.4" fill="#C4942F"/>
+  <circle cx="-8" cy="100" r="1.2" fill="#C4942F"/>
+  <circle cx="-30" cy="97" r="1.3" fill="#C0125C"/>
+  <circle cx="-22" cy="112" r="1.1" fill="#C4942F"/>
+</g>
+<!-- wordmark, bottom -->
+
+<text x="200" y="262" text-anchor="middle" font-family="Cinzel, Georgia, serif" font-weight="600" font-size="36" fill="#3C0C54" letter-spacing="1">Riddhi Siddhi</text>
+<text x="200" y="292" text-anchor="middle" font-family="Cinzel, Georgia, serif" font-weight="500" font-size="13" fill="#C4942F" letter-spacing="7">CREATIONS</text>
+
+<line x1="152" y1="308" x2="188" y2="308" stroke="#C4942F" stroke-width="1"/>
+<line x1="212" y1="308" x2="248" y2="308" stroke="#C4942F" stroke-width="1"/>
+<rect x="196.5" y="304.5" width="7" height="7" transform="rotate(45 200 308)" fill="#C0125C"/>
+<circle cx="188" cy="308" r="1.5" fill="#C4942F"/>
+<circle cx="212" cy="308" r="1.5" fill="#C4942F"/>
+<text x="200" y="334" text-anchor="middle" font-family="Cinzel, Georgia, serif" font-weight="500" font-size="10" fill="#6B3A1E" letter-spacing="4">HENNA ART</text>
+<!-- corner fans -->
+<path d="M 0 -26 Q 3.5 -31.5 0 -37 Q -3.5 -31.5 0 -26 Z" fill="none" stroke="#C4942F" stroke-width="1.3" transform="translate(14 14) rotate(112.0)"/>
+<path d="M 0 -30 L 0 -32" stroke="#C4942F" stroke-width="0.8" opacity="0.7" transform="translate(14 14) rotate(112.0)"/>
+<path d="M 0 -26 Q 3.5 -31.5 0 -37 Q -3.5 -31.5 0 -26 Z" fill="none" stroke="#C4942F" stroke-width="1.3" transform="translate(14 14) rotate(135.0)"/>
+<path d="M 0 -30 L 0 -32" stroke="#C4942F" stroke-width="0.8" opacity="0.7" transform="translate(14 14) rotate(135.0)"/>
+<circle cx="0" cy="-41" r="1.4" fill="#C0125C" transform="translate(14 14) rotate(135.0)"/>
+<path d="M 0 -26 Q 3.5 -31.5 0 -37 Q -3.5 -31.5 0 -26 Z" fill="none" stroke="#C4942F" stroke-width="1.3" transform="translate(14 14) rotate(158.0)"/>
+<path d="M 0 -30 L 0 -32" stroke="#C4942F" stroke-width="0.8" opacity="0.7" transform="translate(14 14) rotate(158.0)"/>
+<path d="M 0 -26 Q 3.5 -31.5 0 -37 Q -3.5 -31.5 0 -26 Z" fill="none" stroke="#C4942F" stroke-width="1.3" transform="translate(386 14) rotate(202.0)"/>
+<path d="M 0 -30 L 0 -32" stroke="#C4942F" stroke-width="0.8" opacity="0.7" transform="translate(386 14) rotate(202.0)"/>
+<path d="M 0 -26 Q 3.5 -31.5 0 -37 Q -3.5 -31.5 0 -26 Z" fill="none" stroke="#C4942F" stroke-width="1.3" transform="translate(386 14) rotate(225.0)"/>
+<path d="M 0 -30 L 0 -32" stroke="#C4942F" stroke-width="0.8" opacity="0.7" transform="translate(386 14) rotate(225.0)"/>
+<circle cx="0" cy="-41" r="1.4" fill="#C0125C" transform="translate(386 14) rotate(225.0)"/>
+<path d="M 0 -26 Q 3.5 -31.5 0 -37 Q -3.5 -31.5 0 -26 Z" fill="none" stroke="#C4942F" stroke-width="1.3" transform="translate(386 14) rotate(248.0)"/>
+<path d="M 0 -30 L 0 -32" stroke="#C4942F" stroke-width="0.8" opacity="0.7" transform="translate(386 14) rotate(248.0)"/>
+<path d="M 0 -26 Q 3.5 -31.5 0 -37 Q -3.5 -31.5 0 -26 Z" fill="none" stroke="#C4942F" stroke-width="1.3" transform="translate(386 386) rotate(292.0)"/>
+<path d="M 0 -30 L 0 -32" stroke="#C4942F" stroke-width="0.8" opacity="0.7" transform="translate(386 386) rotate(292.0)"/>
+<path d="M 0 -26 Q 3.5 -31.5 0 -37 Q -3.5 -31.5 0 -26 Z" fill="none" stroke="#C4942F" stroke-width="1.3" transform="translate(386 386) rotate(315.0)"/>
+<path d="M 0 -30 L 0 -32" stroke="#C4942F" stroke-width="0.8" opacity="0.7" transform="translate(386 386) rotate(315.0)"/>
+<circle cx="0" cy="-41" r="1.4" fill="#C0125C" transform="translate(386 386) rotate(315.0)"/>
+<path d="M 0 -26 Q 3.5 -31.5 0 -37 Q -3.5 -31.5 0 -26 Z" fill="none" stroke="#C4942F" stroke-width="1.3" transform="translate(386 386) rotate(338.0)"/>
+<path d="M 0 -30 L 0 -32" stroke="#C4942F" stroke-width="0.8" opacity="0.7" transform="translate(386 386) rotate(338.0)"/>
+<path d="M 0 -26 Q 3.5 -31.5 0 -37 Q -3.5 -31.5 0 -26 Z" fill="none" stroke="#C4942F" stroke-width="1.3" transform="translate(14 386) rotate(22.0)"/>
+<path d="M 0 -30 L 0 -32" stroke="#C4942F" stroke-width="0.8" opacity="0.7" transform="translate(14 386) rotate(22.0)"/>
+<path d="M 0 -26 Q 3.5 -31.5 0 -37 Q -3.5 -31.5 0 -26 Z" fill="none" stroke="#C4942F" stroke-width="1.3" transform="translate(14 386) rotate(45.0)"/>
+<path d="M 0 -30 L 0 -32" stroke="#C4942F" stroke-width="0.8" opacity="0.7" transform="translate(14 386) rotate(45.0)"/>
+<circle cx="0" cy="-41" r="1.4" fill="#C0125C" transform="translate(14 386) rotate(45.0)"/>
+<path d="M 0 -26 Q 3.5 -31.5 0 -37 Q -3.5 -31.5 0 -26 Z" fill="none" stroke="#C4942F" stroke-width="1.3" transform="translate(14 386) rotate(68.0)"/>
+<path d="M 0 -30 L 0 -32" stroke="#C4942F" stroke-width="0.8" opacity="0.7" transform="translate(14 386) rotate(68.0)"/>
+</svg>

@@ -1,10 +1,46 @@
-:root {
-  --color-black: #0A0A0A;
-  --color-gold: #C9A24D;
-  --color-gold-dim: rgba(201, 162, 77, 0.15);
-  --color-gold-line: rgba(201, 162, 77, 0.22);
-  --color-ivory: #FAF7F2;
-  --color-ivory-2: #F0EBE3;
-  --color-gray: #5F5F5F;
-  --color-text-muted: rgba(250, 247, 242, 0.75);
+/* Riddhi Siddhi Creations theme helpers: mandala-inspired ornaments used across the site */
+
+/* Scalloped edge between two sections.
+   --scallop-top is the colour of the section above (the petals),
+   --scallop-bottom the colour of the section below. */
+.scallop {
+  height: 22px;
+  background-color: var(--scallop-bottom);
+  background-image: radial-gradient(circle at 11px -2px, var(--scallop-top) 12px, transparent 13px);
+  background-size: 22px 22px;
+  background-repeat: repeat-x;
 }
+
+/* The logo's own watercolour wash, recovered from the source image.
+   Stretched to the section (not cropped) so the pink corners always stay in the corners;
+   a portrait copy serves narrow screens so the wash is not squeezed. */
+.hero-wash {
+  background-color: #FBE6DC;
+  background-image: url('../assets/hero_wash_portrait.jpg');
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+  .hero-wash {
+    background-image: url('../assets/hero_wash.jpg');
+  }
+}
+
+/* Faint mandala dot texture for dark (wine) sections */
+.dots-dark {
+  background-image: radial-gradient(rgba(225, 180, 88, 0.12) 1px, transparent 1.5px);
+  background-size: 26px 26px;
+}
+
+/* Faint mandala dot texture for light sections (gold, so it stays warm rather than grey) */
+.dots-light {
+  background-image: radial-gradient(rgba(196, 148, 47, 0.12) 1px, transparent 1.5px);
+  background-size: 26px 26px;
+}
+
+/* Gold scrollbar for custom dropdowns */
+.gold-scroll::-webkit-scrollbar { width: 4px; }
+.gold-scroll::-webkit-scrollbar-track { background: transparent; }
+.gold-scroll::-webkit-scrollbar-thumb { background: rgba(196, 148, 47, 0.5); border-radius: 2px; }
+.gold-scroll::-webkit-scrollbar-thumb:hover { background: rgba(196, 148, 47, 0.8); }

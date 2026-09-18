@@ -1,26 +1,26 @@
+import Ornament from './Ornament'
+
 interface SectionHeadingProps {
   overline?: string
   title: string
-  light?: boolean
+  tone?: 'light' | 'dark'
+  className?: string
 }
 
-function SectionHeading({ overline, title, light = false }: SectionHeadingProps) {
+function SectionHeading({ overline, title, tone = 'light', className = 'mb-14' }: SectionHeadingProps) {
+  const titleColor = tone === 'dark' ? 'text-cream' : 'text-wine-800'
+  const overlineColor = tone === 'dark' ? 'text-marigold' : 'text-rose-600'
   return (
-    <div className="flex flex-col items-center text-center mb-14">
+    <div className={`flex flex-col items-center text-center ${className}`}>
       {overline && (
-        <span className="font-sans text-[10px] tracking-[4.5px] uppercase text-gold mb-3">
+        <span className={`font-sans text-[10px] font-medium tracking-[4.5px] uppercase mb-3 ${overlineColor}`}>
           {overline}
         </span>
       )}
-      <h2 className={`font-serif italic text-4xl md:text-5xl font-500 leading-tight ${light ? 'text-black' : 'text-ivory'}`}>
+      <h2 className={`font-display text-3xl md:text-4xl lg:text-[44px] font-medium leading-tight ${titleColor}`}>
         {title}
       </h2>
-      {/* Gold rule with diamond */}
-      <div className="flex items-center gap-3 mt-4">
-        <div className="w-10 h-px bg-gold opacity-40" />
-        <div className="w-1.5 h-1.5 bg-gold rotate-45 opacity-70" />
-        <div className="w-10 h-px bg-gold opacity-40" />
-      </div>
+      <Ornament tone={tone} className="mt-5" />
     </div>
   )
 }

@@ -20,8 +20,8 @@ function PhotoGrid() {
   const goPrev = () => setLightboxIndex((i) => (i !== null ? (i - 1 + filtered.length) % filtered.length : 0))
 
   return (
-    <section className="py-24 px-6">
-      <SectionHeading title="Henna Artistry" />
+    <section className="py-24 px-6 bg-cream">
+      <SectionHeading overline="Photography" title="Henna Artistry" className="mb-10" />
 
       {/* Filter pills */}
       <div className="flex flex-wrap justify-center gap-3 mb-12">
@@ -29,10 +29,10 @@ function PhotoGrid() {
           <button
             key={cat.value}
             onClick={() => setActiveCategory(cat.value)}
-            className={`font-sans text-[10px] tracking-[2.5px] uppercase px-5 py-2 border transition-all duration-200 ${
+            className={`font-sans text-[10px] font-medium tracking-[2.5px] uppercase px-5 py-2 rounded-full border transition-all duration-200 ${
               activeCategory === cat.value
-                ? 'border-gold bg-gold/10 text-gold'
-                : 'border-gold/25 text-ivory/60 hover:border-gold/50 hover:text-ivory/80'
+                ? 'border-wine-700 bg-wine-700 text-cream'
+                : 'border-sage/60 text-wine-700 hover:border-wine-700 hover:text-wine-800'
             }`}
           >
             {cat.label}
@@ -42,24 +42,21 @@ function PhotoGrid() {
 
       {/* Grid or empty state */}
       {filtered.length === 0 ? (
-        <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-1">
+        <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-3">
           {Array.from({ length: 6 }).map((_, i) => (
             <div
               key={i}
-              className="aspect-square bg-gold/5 border border-gold/10 flex flex-col items-center justify-center gap-2"
+              className="aspect-square rounded-xl bg-cream-200 border border-henna-400/25 shadow-[0_8px_24px_rgba(107,58,30,0.10)] flex flex-col items-center justify-center gap-2"
             >
-              <div className="w-5 h-px bg-gold/20" />
-              <span className="font-sans text-[9px] tracking-[2px] uppercase text-gold/25">
+              <div className="w-8 h-px bg-marigold-600/50" />
+              <span className="font-sans text-[9px] tracking-[3px] uppercase text-wine-600">
                 Coming Soon
               </span>
             </div>
           ))}
         </div>
       ) : (
-        <motion.div
-          layout
-          className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-1"
-        >
+        <motion.div layout className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-3">
           <AnimatePresence>
             {filtered.map((img, index) => (
               <motion.div
@@ -69,7 +66,7 @@ function PhotoGrid() {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.3 }}
-                className="aspect-square overflow-hidden cursor-pointer group relative"
+                className="aspect-square rounded-xl overflow-hidden cursor-pointer group relative shadow-[0_8px_24px_rgba(107,58,30,0.12)]"
                 onClick={() => openLightbox(index)}
               >
                 <img
@@ -78,8 +75,8 @@ function PhotoGrid() {
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   loading="lazy"
                 />
-                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
-                  <span className="font-sans text-[9px] tracking-[2px] uppercase text-ivory/0 group-hover:text-ivory/80 transition-all duration-300">
+                <div className="absolute inset-0 bg-wine-900/0 group-hover:bg-wine-900/40 transition-all duration-300 flex items-center justify-center">
+                  <span className="font-sans text-[10px] tracking-[3px] uppercase text-cream/0 group-hover:text-cream transition-all duration-300">
                     View
                   </span>
                 </div>
@@ -89,7 +86,6 @@ function PhotoGrid() {
         </motion.div>
       )}
 
-      {/* Lightbox */}
       {lightboxIndex !== null && filtered.length > 0 && (
         <Lightbox
           images={filtered}

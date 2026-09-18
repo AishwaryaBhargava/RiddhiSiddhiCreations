@@ -21,13 +21,11 @@ const steps = [
 
 function BookingSteps() {
   return (
-    <section className="py-24 px-6 bg-ivory">
-      <SectionHeading overline="How It Works" title="Three Simple Steps" light />
+    <section className="py-24 px-6 bg-sage-50">
+      <SectionHeading overline="How It Works" title="Three Simple Steps" />
 
       <div className="max-w-4xl mx-auto relative">
-
-        {/* Connector line */}
-        <div className="absolute top-7 left-[22%] right-[22%] h-px bg-gradient-to-r from-transparent via-gold/25 to-transparent hidden md:block" />
+        <div className="absolute top-8 left-[22%] right-[22%] h-px bg-gradient-to-r from-transparent via-sage/60 to-transparent hidden md:block" />
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-6">
           {steps.map((step, i) => (
@@ -39,17 +37,15 @@ function BookingSteps() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: i * 0.15 }}
             >
-              {/* Number circle */}
-              <div className="w-14 h-14 rounded-full border border-gold/40 flex items-center justify-center mb-6 bg-ivory shadow-[0_0_0_6px_rgba(201,162,77,0.06)]">
-                <span className="font-serif italic text-gold text-2xl font-500">
+              <div className="w-16 h-16 rounded-full bg-cream border border-sage/70 flex items-center justify-center mb-6 shadow-[0_0_0_8px_rgba(126,130,64,0.14)]">
+                <span className="font-display text-rose-600 text-2xl font-semibold">
                   {step.number}
                 </span>
               </div>
-
-              <h3 className="font-serif italic text-[#1a1410] text-xl font-500 mb-3">
+              <h3 className="font-display text-wine-800 text-lg font-semibold mb-3">
                 {step.title}
               </h3>
-              <p className="font-sans text-[#7a7370] text-sm leading-relaxed font-300">
+              <p className="font-sans text-henna text-sm leading-relaxed font-light max-w-xs">
                 {step.description}
               </p>
             </motion.div>

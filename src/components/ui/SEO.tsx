@@ -8,7 +8,7 @@ interface SEOProps {
 
 const BASE_URL = 'https://riddhi-siddhi-creations.vercel.app'
 const DEFAULT_IMAGE = `${BASE_URL}/og-image.jpg`
-const SITE_NAME = 'RiddhiSiddhi Creations'
+const SITE_NAME = 'Riddhi Siddhi Creations'
 
 function SEO({ title, description, image = DEFAULT_IMAGE }: SEOProps) {
   const fullTitle = `${title} | ${SITE_NAME}`
