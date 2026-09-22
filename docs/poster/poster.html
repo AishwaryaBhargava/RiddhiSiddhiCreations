@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Riddhi Siddhi Creations — landscape poster</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<style>
+  /* ── Poster canvas: 1800 × 1200 px, a 3:2 landscape sheet (36 in × 24 in at 50 px/in). ──
+     Change --W/--H to retarget another size; everything is placed in poster pixels. */
+  :root {
+    --W: 1800px; --H: 1200px;
+    --wine: #520A24; --wine-deep: #3E0818; --rose: #B8335F; --rose-soft: #E98BA8;
+    --gold: #C4942F; --gold-light: #E1B458; --cream: #FAF6EA; --blush: #FBE6DC;
+    --henna: #6B3A1E; --sage: #7E8240;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; background: #2a2226; }
+  body { display: grid; place-items: center; overflow: hidden; font-family: 'Outfit', sans-serif; }
+
+  .stage { width: var(--W); height: var(--H); transform-origin: center; }
+
+  .poster {
+    position: relative; width: var(--W); height: var(--H); overflow: hidden;
+    background: var(--cream) url('assets/wash.jpg') center / 100% 100% no-repeat;
+    color: var(--wine); box-shadow: 0 30px 80px rgba(0,0,0,.45);
+  }
+  .poster > * { position: absolute; }
+
+  /* soft blooms echoing the logo's wash */
+  .bloom { border-radius: 50%; pointer-events: none; }
+  .bloom.a { left: -140px; top: -120px; width: 620px; height: 520px; background: radial-gradient(closest-side, rgba(233,139,168,.30), transparent); }
+  .bloom.b { right: -160px; bottom: -160px; width: 700px; height: 560px; background: radial-gradient(closest-side, rgba(233,139,168,.28), transparent); }
+  .bloom.c { left: -80px; bottom: -120px; width: 460px; height: 380px; background: radial-gradient(closest-side, rgba(126,130,64,.18), transparent); }
+  .bloom.d { right: -60px; top: -100px; width: 420px; height: 340px; background: radial-gradient(closest-side, rgba(126,130,64,.14), transparent); }
+  .dots { inset: 0; background-image: radial-gradient(rgba(196,148,47,.14) 1.2px, transparent 1.8px); background-size: 26px 26px; opacity: .5; }
+
+  /* gold frame */
+  .frame { inset: 26px 26px 132px; border: 2px solid rgba(196,148,47,.75); border-bottom: 0; border-radius: 6px 6px 0 0; }
+  .frame-inner { inset: 36px 36px 142px; border: 1px solid rgba(196,148,47,.55); border-bottom: 0; border-radius: 4px 4px 0 0; }
+
+  /* logo + tagline */
+  .logo { left: 50%; top: 26px; transform: translateX(-50%); width: 400px; }
+  .tagline { left: 50%; top: 298px; transform: translateX(-50%); white-space: nowrap;
+    font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 30px; color: var(--henna); }
+
+  /* ornament: gold rule · sage bead · rose bud · sage bead · gold rule */
+  .orn { display: flex; align-items: center; justify-content: center; gap: 10px; }
+  .orn i { display: block; }
+  .orn .l { width: 60px; height: 1px; background: rgba(196,148,47,.7); }
+  .orn .b { width: 6px; height: 6px; border-radius: 50%; background: var(--sage); }
+  .orn .d { width: 10px; height: 10px; background: var(--rose-soft); transform: rotate(45deg); box-shadow: 0 0 0 1px var(--gold); border-radius: 1px; }
+
+  /* the figure */
+  .figure { left: 50%; bottom: 122px; transform: translateX(-50%); height: 750px; width: auto;
+    filter: drop-shadow(0 22px 40px rgba(62,8,24,.28)); }
+  .figure-glow { left: 50%; bottom: 100px; transform: translateX(-50%); width: 700px; height: 760px; border-radius: 50%;
+    background: radial-gradient(ellipse at 50% 60%, rgba(255,255,255,.45), rgba(233,139,168,.12) 55%, transparent 70%); }
+
+  /* motifs in the gaps beside the figure */
+  .motif { pointer-events: none; opacity: .95; }
+  .m-lotus    { left: 566px; top: 356px; width: 176px; }
+  .m-bride    { left: 560px; top: 520px; width: 170px; }
+  .m-cow      { left: 570px; top: 848px; width: 172px; }
+  .m-peacock  { right: 560px; top: 340px; width: 170px; }
+  .m-elephant { right: 562px; top: 690px; width: 168px; }
+  .m-horse    { right: 556px; top: 852px; width: 180px; }
+  .m-fl-tl    { left: 40px; top: 40px; width: 150px; }
+  .m-fl-tr    { right: 40px; top: 40px; width: 150px; }
+  .m-fl-bl    { left: 44px; bottom: 44px; width: 118px; transform: scaleY(-1); }
+  .m-fl-br    { right: 44px; bottom: 44px; width: 112px; transform: scaleY(-1); }
+
+  /* the two text cards */
+  .card {
+    top: 366px; width: 470px; height: 640px; padding: 34px 38px 30px;
+    background: rgba(255,255,255,.62); border: 1.5px solid rgba(196,148,47,.7); border-radius: 26px;
+    box-shadow: 0 18px 50px rgba(107,58,30,.12); backdrop-filter: blur(2px);
+  }
+  .card.left { left: 92px; }
+  .card.right { right: 92px; }
+  .card .icon { display: block; width: 56px; margin: 0 auto 8px; }
+  .card h2 { font-family: 'Cinzel', serif; font-weight: 600; font-size: 34px; line-height: 1.15; text-align: center; color: var(--wine-deep); letter-spacing: .5px; }
+  .card .orn { margin: 14px 0 22px; }
+  .card p { font-family: 'Outfit', sans-serif; font-size: 22px; line-height: 1.55; text-align: center; color: var(--henna); font-weight: 300; }
+  .card .overline { display: block; text-align: center; font-size: 12px; letter-spacing: 5px; text-transform: uppercase; color: var(--rose); font-weight: 500; margin-bottom: 8px; }
+  .card ul { list-style: none; display: flex; flex-direction: column; gap: 13px; }
+  .card li { display: flex; gap: 14px; font-family: 'Outfit', sans-serif; font-size: 21px; line-height: 1.45; color: var(--henna); font-weight: 300; }
+  .card li::before { content: ''; flex: none; width: 9px; height: 9px; margin-top: 11px; background: var(--rose-soft); transform: rotate(45deg); box-shadow: 0 0 0 1px var(--gold); border-radius: 1px; }
+
+  /* vertical tracked words beside the figure, from the source posters */
+  .side-words { top: 50%; transform: translateY(-50%); writing-mode: vertical-rl; font-size: 13px; letter-spacing: 4px; text-transform: uppercase; color: var(--rose); font-weight: 500; opacity: .85; }
+  .side-words.l { left: 54px; transform: translateY(-50%) rotate(180deg); }
+  .side-words.r { right: 54px; }
+
+  /* contact band: wine, scalloped top, like the website's closing band */
+  .band { left: 0; right: 0; bottom: 0; height: 120px; background: linear-gradient(to bottom, #6A1030, #3E0818 70%, #2E0412); }
+  .band::before { content: ''; position: absolute; left: 0; right: 0; top: -22px; height: 22px;
+    background-color: #6A1030; background-image: radial-gradient(circle at 11px -2px, #FAF6EA 12px, transparent 13px); background-size: 22px 22px; background-repeat: repeat-x; }
+  .band-dots { inset: 0; background-image: radial-gradient(rgba(225,180,88,.14) 1.2px, transparent 1.8px); background-size: 26px 26px; }
+  .contact { left: 50%; bottom: 40px; transform: translateX(-50%); display: flex; align-items: center; gap: 28px; white-space: nowrap; }
+  .contact .item { display: flex; align-items: center; gap: 10px; font-family: 'Cinzel', serif; font-weight: 600; font-size: 24px; color: var(--cream); }
+  .contact .item span { font-family: 'Outfit', sans-serif; font-weight: 400; font-size: 22px; letter-spacing: .5px; color: var(--gold-light); }
+  .contact svg { width: 26px; height: 26px; stroke: var(--rose-soft); fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+  .contact .sep { width: 8px; height: 8px; background: var(--rose-soft); transform: rotate(45deg); box-shadow: 0 0 0 1px var(--gold); }
+  .strap { left: 50%; bottom: 140px; transform: translateX(-50%); font-size: 13px; letter-spacing: 6px; text-transform: uppercase; color: var(--rose); font-weight: 500; white-space: nowrap; }
+
+  @media print {
+    @page { size: 1800px 1200px; margin: 0; }
+    html, body { background: none; overflow: visible; }
+    .stage { transform: none !important; }
+    .poster { box-shadow: none; }
+  }
+</style>
+</head>
+<body>
+<div class="stage">
+<div class="poster">
+  <div class="bloom a"></div><div class="bloom b"></div><div class="bloom c"></div><div class="bloom d"></div>
+  <div class="dots"></div>
+  <div class="frame"></div><div class="frame-inner"></div>
+
+  <img class="motif m-fl-tl" src="assets/motif-flowers-tl.png" alt="" />
+  <img class="motif m-fl-tr" src="assets/motif-flowers-tr.png" alt="" />
+
+  <img class="logo" src="assets/logo.webp" alt="Riddhi Siddhi Creations" />
+  <div class="tagline">Henna Art for Beautiful Moments</div>
+
+  <!-- left card: about henna -->
+  <section class="card left">
+    <img class="icon" src="assets/motif-lotus-icon.png" alt="" />
+    <span class="overline">About</span>
+    <h2>What is Henna<br>(Mehndi)?</h2>
+    <div class="orn"><i class="l"></i><i class="b"></i><i class="d"></i><i class="b"></i><i class="l"></i></div>
+    <p>Henna is a plant-based temporary body art made from henna powder and essential oils. It is a beautiful way to celebrate weddings, birthdays, parties, baby showers, festivals and all of life's special moments.</p>
+    <p style="margin-top:22px;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:25px;color:var(--wine-deep)">Every design is drawn by hand, made for you, with 100% natural organic henna.</p>
+  </section>
+
+  <!-- motifs beside the figure -->
+  <img class="motif m-lotus" src="assets/motif-lotus.png" alt="" />
+  <img class="motif m-bride" src="assets/motif-bride.png" alt="" />
+  <img class="motif m-cow" src="assets/motif-cow.png" alt="" />
+  <img class="motif m-peacock" src="assets/motif-peacock.png" alt="" />
+  <img class="motif m-elephant" src="assets/motif-elephant.png" alt="" />
+  <img class="motif m-horse" src="assets/motif-horse.png" alt="" />
+
+  <div class="side-words l">Tradition · Culture · Beauty · Always in style</div>
+  <div class="side-words r">Art · People · Celebrations · Happier together</div>
+
+  <!-- the figure -->
+  <div class="figure-glow"></div>
+  <img class="figure" id="figure" src="assets/figure-solo.png" alt="Siddhi Bhargava, henna artist" />
+
+  <!-- right card: aftercare -->
+  <section class="card right">
+    <img class="icon" src="assets/motif-lotus-icon.png" alt="" />
+    <span class="overline">Caring for your henna</span>
+    <h2>Henna Aftercare</h2>
+    <div class="orn"><i class="l"></i><i class="b"></i><i class="d"></i><i class="b"></i><i class="l"></i></div>
+    <ul>
+      <li>Keep the henna paste on for at least 2 to 3 hours.</li>
+      <li>The longer you keep it on, the darker the stain may become.</li>
+      <li>Gently scrape off the dried paste; do not wash it off.</li>
+      <li>Avoid water for at least 6 to 8 hours.</li>
+      <li>The stain looks lighter at first and deepens over the next 24 to 48 hours.</li>
+    </ul>
+  </section>
+
+  <div class="strap">Mehndi creates beautiful connections</div>
+  <div class="band"><div class="band-dots" style="position:absolute"></div></div>
+  <div class="contact">
+    <div class="item">
+      <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.77 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.09a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      Call / Text <span>+1 (484) 995-2144</span>
+    </div>
+    <div class="sep"></div>
+    <div class="item">
+      <svg viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+      <span>@riddhisiddhicreations22</span>
+    </div>
+    <div class="sep"></div>
+    <div class="item">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+      <span>riddhi-siddhi-creations.vercel.app</span>
+    </div>
+  </div>
+</div>
+</div>
+
+<script>
+  // ?figure=solo|full|family swaps the centre cut-out; ?fit=0 disables scale-to-window (used for export)
+  const q = new URLSearchParams(location.search)
+  const fig = q.get('figure') || 'solo'
+  const img = document.getElementById('figure')
+  const sizes = { solo: '750px', full: '800px', family: '800px' }
+  img.src = `assets/figure-${fig}.png`
+  img.style.height = sizes[fig] || sizes.solo
+  if (fig !== 'solo') {
+    // the tall cut-outs fill the full height, so the tagline and strap step aside
+    img.style.bottom = '112px'
+    document.querySelector('.tagline').style.display = 'none'
+    document.querySelector('.strap').style.display = 'none'
+  }
+
+  const stage = document.querySelector('.stage')
+  function fit() {
+    if (q.get('fit') === '0') { stage.style.transform = 'none'; return }
+    const s = Math.min(window.innerWidth / 1800, window.innerHeight / 1200) * 0.96
+    stage.style.transform = `scale(${s})`
+  }
+  fit(); window.addEventListener('resize', fit)
+</script>
+</body>
+</html>
