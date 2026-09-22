@@ -209,19 +209,19 @@
 
 <script>
   // ?figure=solo|full|family swaps the centre cut-out; ?fit=0 disables scale-to-window (used for export)
-  // ?figure=sharara (default) | balloons-a | balloons-b | portrait | real | solo | full | family
+  // ?figure=sharara (default) | red | balloons-a | balloons-b | portrait | real | solo | full | family
   const q = new URLSearchParams(location.search)
   const fig = q.get('figure') || 'sharara'
   const img = document.getElementById('figure')
   const sizes = { solo: '750px', full: '800px', family: '800px', real: '820px',
-                  sharara: '760px', 'balloons-a': '810px', 'balloons-b': '790px' }
+                  sharara: '760px', 'balloons-a': '810px', 'balloons-b': '790px', red: '735px' }
   img.src = `assets/figure-${fig}.png`
   img.style.height = sizes[fig] || sizes.sharara
 
   if (fig === 'portrait') {
     document.getElementById('poster').classList.add('portrait')
     document.querySelector('.strap').style.display = 'none'
-  } else if (fig === 'sharara' || fig.startsWith('balloons')) {
+  } else if (fig === 'sharara' || fig.startsWith('balloons') || fig === 'red') {
     // full-length figure under the logo, standing on the wine band; motifs step out beside her
     img.style.bottom = '112px'
     img.style.marginLeft = fig === 'sharara' ? '30px' : '0px'
