@@ -94,11 +94,11 @@
   .side-words.r { right: 54px; }
 
   /* contact band: wine, scalloped top, like the website's closing band */
-  .band { left: 0; right: 0; bottom: 0; height: 120px; background: linear-gradient(to bottom, #6A1030, #3E0818 70%, #2E0412); }
+  .band { left: 0; right: 0; bottom: 0; height: 120px; z-index: 2; background: linear-gradient(to bottom, #6A1030, #3E0818 70%, #2E0412); }
   .band::before { content: ''; position: absolute; left: 0; right: 0; top: -22px; height: 22px;
     background-color: #6A1030; background-image: radial-gradient(circle at 11px -2px, #FAF6EA 12px, transparent 13px); background-size: 22px 22px; background-repeat: repeat-x; }
   .band-dots { inset: 0; background-image: radial-gradient(rgba(225,180,88,.14) 1.2px, transparent 1.8px); background-size: 26px 26px; }
-  .contact { left: 50%; bottom: 40px; transform: translateX(-50%); display: flex; align-items: center; gap: 28px; white-space: nowrap; }
+  .contact { z-index: 3; left: 50%; bottom: 40px; transform: translateX(-50%); display: flex; align-items: center; gap: 28px; white-space: nowrap; }
   .contact .item { display: flex; align-items: center; gap: 10px; font-family: 'Cinzel', serif; font-weight: 600; font-size: 24px; color: var(--cream); }
   .contact .item span { font-family: 'Outfit', sans-serif; font-weight: 400; font-size: 22px; letter-spacing: .5px; color: var(--gold-light); }
   .contact svg { width: 26px; height: 26px; stroke: var(--rose-soft); fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
@@ -149,7 +149,7 @@
 
   <!-- the figure -->
   <div class="figure-glow"></div>
-  <img class="figure" id="figure" src="assets/figure-solo.png" alt="Siddhi Bhargava, henna artist" />
+  <img class="figure" id="figure" src="assets/figure-real.png" alt="Siddhi Bhargava, henna artist" />
 
   <!-- right card: aftercare -->
   <section class="card right">
@@ -190,12 +190,17 @@
 <script>
   // ?figure=solo|full|family swaps the centre cut-out; ?fit=0 disables scale-to-window (used for export)
   const q = new URLSearchParams(location.search)
-  const fig = q.get('figure') || 'solo'
+  const fig = q.get('figure') || 'real'
   const img = document.getElementById('figure')
-  const sizes = { solo: '750px', full: '800px', family: '800px' }
+  const sizes = { solo: '750px', full: '800px', family: '800px', real: '820px' }
   img.src = `assets/figure-${fig}.png`
   img.style.height = sizes[fig] || sizes.solo
-  if (fig !== 'solo') {
+  if (fig.startsWith('real')) {
+    // photo cut-out ends at the cake in the source, so it tucks under the wine band
+    img.style.bottom = '48px'
+    img.style.zIndex = '0'
+    document.querySelector('.strap').style.display = 'none'
+  } else if (fig !== 'solo') {
     // the tall cut-outs fill the full height, so the tagline and strap step aside
     img.style.bottom = '112px'
     document.querySelector('.tagline').style.display = 'none'

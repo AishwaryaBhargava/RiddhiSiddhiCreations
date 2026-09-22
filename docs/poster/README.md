@@ -3,7 +3,8 @@
 `poster.html` is a fixed 1800 x 1200 px canvas (a 3:2 landscape sheet, e.g. 36 x 24 in).
 Open it in any browser; it scales to fit the window. Query parameters:
 
-- `?figure=solo` (default) - half-body cut-out with the henna cone, from the vertical poster
+- `?figure=real` (default) - Siddhi cut out of a real photo (birthday-photo.jpg), pink floral dress
+- `?figure=solo` - half-body AI-artwork cut-out with the henna cone, from the vertical poster
 - `?figure=full` - full-length cut-out from the other vertical poster
 - `?figure=family` - Siddhi lifted from the family photo (the daughter she is holding comes with her)
 
