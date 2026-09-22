@@ -107,6 +107,14 @@
   .contact .sep { width: 8px; height: 8px; background: var(--rose-soft); transform: rotate(45deg); box-shadow: 0 0 0 1px var(--gold); }
   .strap { left: 50%; bottom: 140px; transform: translateX(-50%); font-size: 13px; letter-spacing: 6px; text-transform: uppercase; color: var(--rose); font-weight: 500; white-space: nowrap; }
 
+  /* wide-figure: motifs slide outward beside the flared skirt */
+  .wide-figure .m-lotus { left: 566px; top: 356px; }
+  .wide-figure .m-bride { left: 548px; top: 520px; width: 150px; }
+  .wide-figure .m-cow { left: 556px; top: 878px; width: 150px; }
+  .wide-figure .m-peacock { right: 548px; top: 340px; width: 150px; }
+  .wide-figure .m-elephant { right: 556px; top: 700px; width: 150px; }
+  .wide-figure .m-horse { right: 552px; top: 878px; width: 156px; }
+
   @media print {
     @page { size: 1800px 1200px; margin: 0; }
     html, body { background: none; overflow: visible; }
@@ -152,7 +160,7 @@
   <!-- the figure -->
   <div class="figure-glow"></div>
   <div class="figure-shadow"></div>
-  <img class="figure" id="figure" src="assets/figure-real.png" alt="Siddhi Bhargava, henna artist" />
+  <img class="figure" id="figure" src="assets/figure-sharara.png" alt="Siddhi Bhargava, henna artist" />
 
   <!-- right card: aftercare -->
   <section class="card right">
@@ -193,12 +201,20 @@
 <script>
   // ?figure=solo|full|family swaps the centre cut-out; ?fit=0 disables scale-to-window (used for export)
   const q = new URLSearchParams(location.search)
-  const fig = q.get('figure') || 'real'
+  const fig = q.get('figure') || 'sharara'
   const img = document.getElementById('figure')
-  const sizes = { solo: '750px', full: '800px', family: '800px', real: '820px' }
+  const sizes = { solo: '750px', full: '800px', family: '800px', real: '820px', sharara: '760px' }
   img.src = `assets/figure-${fig}.png`
   img.style.height = sizes[fig] || sizes.solo
-  if (fig.startsWith('real')) {
+  if (fig === 'sharara') {
+    // full-length figure under the logo, standing on the wine band; motifs step out from under her skirt
+    img.style.bottom = '112px'
+    img.style.marginLeft = '30px'
+    document.querySelector('.strap').style.display = 'none'
+    document.querySelector('.figure-glow').style.width = '900px'
+    document.querySelector('.figure-shadow').style.width = '620px'
+    document.body.classList.add('wide-figure')
+  } else if (fig.startsWith('real')) {
     // photo cut-out ends at the cake in the source, so it tucks under the wine band
     img.style.bottom = '48px'
     img.style.zIndex = '0'
