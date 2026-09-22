@@ -54,9 +54,11 @@
 
   /* the figure */
   .figure { left: 50%; bottom: 122px; transform: translateX(-50%); height: 750px; width: auto;
-    filter: drop-shadow(0 22px 40px rgba(62,8,24,.28)); }
-  .figure-glow { left: 50%; bottom: 100px; transform: translateX(-50%); width: 700px; height: 760px; border-radius: 50%;
-    background: radial-gradient(ellipse at 50% 60%, rgba(255,255,255,.45), rgba(233,139,168,.12) 55%, transparent 70%); }
+    filter: drop-shadow(0 16px 28px rgba(62,8,24,.22)); }
+  .figure-glow { left: 50%; bottom: 100px; transform: translateX(-50%); width: 760px; height: 820px; border-radius: 50%;
+    background: radial-gradient(ellipse at 50% 55%, rgba(255,255,255,.62), rgba(251,230,220,.45) 40%, rgba(233,139,168,.14) 62%, transparent 74%); }
+  .figure-shadow { left: 50%; bottom: 96px; transform: translateX(-50%); width: 560px; height: 90px; border-radius: 50%;
+    background: radial-gradient(ellipse, rgba(82,10,36,.22), transparent 70%); filter: blur(6px); }
 
   /* motifs in the gaps beside the figure */
   .motif { pointer-events: none; opacity: .95; }
@@ -149,6 +151,7 @@
 
   <!-- the figure -->
   <div class="figure-glow"></div>
+  <div class="figure-shadow"></div>
   <img class="figure" id="figure" src="assets/figure-real.png" alt="Siddhi Bhargava, henna artist" />
 
   <!-- right card: aftercare -->
