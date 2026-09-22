@@ -192,7 +192,7 @@
   const q = new URLSearchParams(location.search)
   const fig = q.get('figure') || 'real'
   const img = document.getElementById('figure')
-  const sizes = { solo: '750px', full: '800px', family: '800px', real: '820px', 'real-lavender': '820px' }
+  const sizes = { solo: '750px', full: '800px', family: '800px', real: '820px' }
   img.src = `assets/figure-${fig}.png`
   img.style.height = sizes[fig] || sizes.solo
   if (fig.startsWith('real')) {
