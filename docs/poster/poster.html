@@ -115,6 +115,15 @@
   .wide-figure .m-elephant { right: 556px; top: 700px; width: 150px; }
   .wide-figure .m-horse { right: 552px; top: 878px; width: 156px; }
 
+  /* portrait variant: a circular medallion instead of a standing figure */
+  .poster.portrait .figure {
+    bottom: auto; top: 356px; height: 470px; width: 470px; object-fit: cover; object-position: 50% 22%;
+    margin-left: 0 !important; border-radius: 50%; filter: none;
+    box-shadow: 0 0 0 8px #FAF6EA, 0 0 0 10px rgba(196,148,47,.9), 0 0 0 22px rgba(251,230,220,.85), 0 0 0 23px rgba(196,148,47,.45), 0 22px 46px rgba(62,8,24,.26);
+  }
+  .poster.portrait .figure-shadow { bottom: 300px; width: 420px; height: 56px; }
+  .poster.portrait .figure-glow { bottom: 250px; width: 700px; height: 700px; }
+
   @media print {
     @page { size: 1800px 1200px; margin: 0; }
     html, body { background: none; overflow: visible; }
@@ -125,7 +134,7 @@
 </head>
 <body>
 <div class="stage">
-<div class="poster">
+<div class="poster" id="poster">
   <div class="bloom a"></div><div class="bloom b"></div><div class="bloom c"></div><div class="bloom d"></div>
   <div class="dots"></div>
   <div class="frame"></div><div class="frame-inner"></div>
@@ -200,27 +209,31 @@
 
 <script>
   // ?figure=solo|full|family swaps the centre cut-out; ?fit=0 disables scale-to-window (used for export)
+  // ?figure=sharara (default) | balloons-a | balloons-b | portrait | real | solo | full | family
   const q = new URLSearchParams(location.search)
   const fig = q.get('figure') || 'sharara'
   const img = document.getElementById('figure')
-  const sizes = { solo: '750px', full: '800px', family: '800px', real: '820px', sharara: '760px' }
+  const sizes = { solo: '750px', full: '800px', family: '800px', real: '820px',
+                  sharara: '760px', 'balloons-a': '810px', 'balloons-b': '790px' }
   img.src = `assets/figure-${fig}.png`
-  img.style.height = sizes[fig] || sizes.solo
-  if (fig === 'sharara') {
-    // full-length figure under the logo, standing on the wine band; motifs step out from under her skirt
-    img.style.bottom = '112px'
-    img.style.marginLeft = '30px'
+  img.style.height = sizes[fig] || sizes.sharara
+
+  if (fig === 'portrait') {
+    document.getElementById('poster').classList.add('portrait')
     document.querySelector('.strap').style.display = 'none'
-    document.querySelector('.figure-glow').style.width = '900px'
-    document.querySelector('.figure-shadow').style.width = '620px'
+  } else if (fig === 'sharara' || fig.startsWith('balloons')) {
+    // full-length figure under the logo, standing on the wine band; motifs step out beside her
+    img.style.bottom = '112px'
+    img.style.marginLeft = fig === 'sharara' ? '30px' : '0px'
+    document.querySelector('.strap').style.display = 'none'
+    document.querySelector('.figure-glow').style.width = fig === 'sharara' ? '900px' : '760px'
+    document.querySelector('.figure-shadow').style.width = fig === 'sharara' ? '620px' : '440px'
     document.body.classList.add('wide-figure')
   } else if (fig.startsWith('real')) {
-    // photo cut-out ends at the cake in the source, so it tucks under the wine band
     img.style.bottom = '48px'
     img.style.zIndex = '0'
     document.querySelector('.strap').style.display = 'none'
   } else if (fig !== 'solo') {
-    // the tall cut-outs fill the full height, so the tagline and strap step aside
     img.style.bottom = '112px'
     document.querySelector('.tagline').style.display = 'none'
     document.querySelector('.strap').style.display = 'none'
